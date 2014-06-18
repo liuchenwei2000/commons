@@ -1,0 +1,3 @@
+DBCP （Database Connection Pool）是一个依赖Jakarta commons-pool对象池机制的数据库连接池。
+
+commons-dbpc 依赖于 commons-collections.jar、commons-pool.jar。

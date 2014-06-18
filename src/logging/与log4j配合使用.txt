@@ -1,0 +1,51 @@
+
+因为Log4j的强大，同时开发者又不希望对Log4j的依赖性太强。所以目前比较流行的是Commons-logging和Log4j结合使用。 
+
+1. 部署日志器 
+下载commons-logging.jar和log4j.jar包，能后把它们放到工程的lib目录下，引入工程中。 
+  
+2. 指定日志器 
+在属性文件common-logging.properties中设置实现接口的类。如下(这里设置Log4j为所使用的日志包)： 
+
+#commons-logging.properties文件配置信息 
+# org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog 
+# Must be one of ("trace", "debug", "info", "warn", "error", or "fatal"). 
+#利用log4j为输出介质 
+org.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger
+#JDK5 Logger 
+#org.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger
+
+common-logging.properties文件需要放在 commons-logging.jar 里，或者classpath路径中。
+
+3．org.apache.commons.logging.Log接口中定义的方法,按严重性由高到低的顺序有： 
+log.fatal(Object message); 
+log.fatal(Object message, Throwable t); 
+log.error(Object message); 
+log.error(Object message, Throwable t); 
+log.warn(Object message); 
+log.warn(Object message, Throwable t); 
+log.info(Object message); 
+log.info(Object message, Throwable t); 
+log.debug(Object message); 
+log.debug(Object message, Throwable t); 
+log.trace(Object message); 
+log.trace(Object message, Throwable t); 
+
+除此以外，还提供下列方法以便代码保护。 
+log.isFatalEnabled(); 
+log.isErrorEnabled(); 
+log.isWarnEnabled(); 
+log.isInfoEnabled(); 
+log.isDebugEnabled(); 
+log.isTraceEnabled(); 
+
+4．信息级别
+
+确保日志信息在内容上和反应问题的严重程度上的恰当，是非常重要的。 
+1）fatal非常严重的错误，导致系统中止。期望这类信息能立即显示在状态控制台上。 
+2）error其它运行期错误或不是预期的条件。期望这类信息能立即显示在状态控制台上。 
+3）warn使用了不赞成使用的API、非常拙劣使用API, '几乎就是'错误, 其它运行时不合需要和不合预期的状态但还没必要称为 "错误"。期望这类信息能立即显示在状态控制台上。 
+4）info运行时产生的有意义的事件。期望这类信息能立即显示在状态控制台上。 
+5）debug系统流程中的细节信息。期望这类信息仅被写入log文件中。 
+6）trace更加细节的信息。期望这类信息仅被写入log文件中。 
+通常情况下，记录器的级别不应低于info.也就是说，通常情况下debug的信息不应被写入log文件中。 

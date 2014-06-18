@@ -1,0 +1,12 @@
+commons-Primitives 提供了一个更小，更快和更易使用的对Java基本类型的支持。当前主要是针对基本类型的 collection。
+
+尽管JDK1.5提供了基础类型的自动拆箱/装箱功能，但是这个功能对内存消耗和性能都是有影响的。
+commons-Primitives 可以容纳基础类型，并且提供更快的速度，更高的性能。
+
+The primitive collections are most useful for applications that create very many or very large collections of primitive types, 
+or that process them very frequently.
+
+Using autoboxing, it is possible to emulate the syntax of using the primitive collections. 
+For example, list.add(19) will work equally well whether list is a List or IntList, since the compiler will automatically convert list.add(19) into list.add(new Integer(19)).
+While this sugar-coating of the primitive-to-Object-wrapper syntax is a welcome improvement, it does not change the underlying representation of the List. 
+That is, ArrayList will still use 16 bytes per element, even if that element could be represented by a single byte.

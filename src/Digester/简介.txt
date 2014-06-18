@@ -1,0 +1,59 @@
+
+commons-Digester 基于规则的XML文档解析器，主要用于XML到Java对象的映射。
+
+它依赖的组件：BeanUtils、Logging、Collections。
+
+
+基本概念
+
+1. 在Digester的内部采用SAX来解析XML文件。为了能够正确的使用它，必须在解析之前进行相应的设置。
+同时，在解析xml文件的过程中，它使用Stack来保存和检索这个期间产生的对象。
+
+2. 为了简化使用，它通过匹配模式来定位要解析的xml标签。匹配模式的例子如下：
+
+xml文件：
+
+<?xml version="1.0" encoding="utf-8"?>
+<students> 
+  <student> 
+    <name>Java Boy</name>  
+    <course>JSP</course> 
+  </student>  
+  <student> 
+    <name>Java Girl</name>  
+    <course>EJB</course> 
+  </student> 
+</students>
+
+
+每个标签与相应的匹配模式对应如下：
+
+        标签                               匹配模式
+<students>        students
+<student>         students/student
+<name>            students/student/name
+<course>          students/student/course
+
+如果将xml文件结构视为一颗树的话，那么每个标签的匹配模式就是从根元素到这个元素的路径。除了使用具体的标签，还可以使用通配符。
+
+3. 使用匹配模式可以很方便的定位需要处理的元素，为了处理这些元素，需要定义处理规则。
+规则在匹配模式被找到时起作用。所有的规则都是从org.apache.commons.digester.Rule派生的。
+所有已定义的Rule对象，可以在org.apache.commons.digester中找到。
+
+常用的规则：
+- ObjectCreate，创建对象实例。
+- SetProperties，将标签属性（Attribute）与要创建的对象的属性相关联。
+- BeanPropertySetter，将标签所包含标签与要创建的对象的属性相关联。
+- SetNext，设置遇到下一个标签时的动作。
+- CallMethod，设置当匹配模式被找到时要调用的方法。
+- CallParam，设置对应的callMethod中指定方法所需要的参数值。
+
+
+基本使用
+
+ 以正确的顺序调用Digester方法是成功使用Digester处理XML文件的关键。使用步骤如下：
+1. 创建org.apache.commons.digester.Digester实例并配置，包括设置实现Digester Rule的对象。
+2. 使用Digester的push方法在Digester使用的stack中放置一个初始对象。在解析xml文件的过程中，Digester使用stack来保存它所找到的对象。
+第一个对象在遇到第一个标签时被放置到stack中，当最后一个标签处理完毕时被弹出。为了最后能检索到这个对象，因此需要一个初始对象来保留一个指向它的引用。
+3. 注册匹配模式和rule。
+4. 调用parse来解析xml文件。
