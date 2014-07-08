@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>
+      Welcome!!!
+    </title>
+  </head>
+  <body>
+    <!-- 注意 enctype 属性的值必须是  "multipart/form-data" 才可以 -->
+    <form method="POST" enctype="multipart/form-data" action="upload.do">
+      File to upload:
+      <input type="file" name="upfile">
+      <br/>
+      Notes about the file:
+      <input type="text" name="note">
+      <br/>
+      <br/>
+      <input type="submit" value="Press">
+      to upload the file!
+    </form>
+  </body>
+
+</html>
