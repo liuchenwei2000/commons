@@ -6,9 +6,9 @@ package math;
 import org.apache.commons.lang3.math.Fraction;
 
 /**
- * Fraction示例
+ * Fraction 示例
  * <p>
- * Fraction能够精确的表示分数，是Number的实现类，也是不可变类。
+ * Fraction 能够精确的表示分数，是Number的实现类，也是不可变类。
  * 
  * @author 刘晨伟
  * 
