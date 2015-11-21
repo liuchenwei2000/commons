@@ -1,4 +1,4 @@
-commons-FileUpload FileUpload ÊÇ Apache commonsÏÂÃæµÄÒ»¸ö×ÓÏîÄ¿£¬ÓÃÀ´ÊµÏÖJava»·¾³ÏÂÃæµÄÎÄ¼şÉÏ´«¹¦ÄÜ£¬Óë³£¼ûµÄSmartUploadÆëÃû¡£
+commons-FileUpload FileUpload æ˜¯ Apache commonsä¸‹é¢çš„ä¸€ä¸ªå­é¡¹ç›®ï¼Œç”¨æ¥å®ç°Javaç¯å¢ƒä¸‹é¢çš„æ–‡ä»¶ä¸Šä¼ åŠŸèƒ½ï¼Œä¸å¸¸è§çš„SmartUploadé½åã€‚
 
 FileUpload parses HTTP requests which conform to RFC 1867, "Form-based File Upload in HTML". 
 That is, if an HTTP request is submitted using the POST method, and with a content type of "multipart/form-data", 

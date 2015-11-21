@@ -4,11 +4,11 @@
 package bean;
 
 /**
- * Ò»¸öÆÕÍ¨µÄJavaBean
+ * ä¸€ä¸ªæ™®é€šçš„JavaBean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ26æ—¥
  */
 public class Address {
 

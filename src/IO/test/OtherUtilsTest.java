@@ -12,11 +12,11 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.LockableFileWriter;
 
 /**
- * ÆäËû¹¤¾ßÀàÊ¾Àı
+ * å…¶ä»–å·¥å…·ç±»ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class OtherUtilsTest {
 
@@ -29,11 +29,11 @@ public class OtherUtilsTest {
 	}
 	
 	/**
-	 * FileSystemUtilsÌá¹©ÁËJDK²»Ö§³ÖµÄ·½·¨£¬ÈçÓ²ÅÌµÄÊ£Óà¿Õ¼ä
+	 * FileSystemUtilsæä¾›äº†JDKä¸æ”¯æŒçš„æ–¹æ³•ï¼Œå¦‚ç¡¬ç›˜çš„å‰©ä½™ç©ºé—´
 	 */
 	private static void testFileSystemUtils() {
 		try {
-			// ·µ»ØÖ¸¶¨Â·¾¶µÄÊ£Óà¿Õ¼ä£¬µ¥Î»KB
+			// è¿”å›æŒ‡å®šè·¯å¾„çš„å‰©ä½™ç©ºé—´ï¼Œå•ä½KB
 			long capcity = FileSystemUtils.freeSpaceKb("C:/");
 			System.out.println(capcity / ((double) 1024 * 1024) + " GB");
 		} catch (IOException e) {
@@ -42,7 +42,7 @@ public class OtherUtilsTest {
 	}
 	
 	/**
-	 * LockableFileWriter Ê¹ÓÃ¡°ÎÄ¼şËø¡±¶ø·Ç¡°¶ÔÏóËø¡±À´ÏŞÖÆ¶àÏß³Ì»·¾³ÏÂµÄĞ´¶¯×÷¡£
+	 * LockableFileWriter ä½¿ç”¨â€œæ–‡ä»¶é”â€è€Œéâ€œå¯¹è±¡é”â€æ¥é™åˆ¶å¤šçº¿ç¨‹ç¯å¢ƒä¸‹çš„å†™åŠ¨ä½œã€‚
 	 */
 	private static void testLockableFileWriter() {
 		new Thread(new LockableFileWriterTestTask()).start();

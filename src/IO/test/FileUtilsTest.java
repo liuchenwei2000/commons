@@ -13,13 +13,13 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 
 /**
- * FileUtilsÊ¾Àı
+ * FileUtilsç¤ºä¾‹
  * <p>
- * FileUtils ÊµÏÖÄ¿Â¼¡¢ÎÄ¼şµÄ´´½¨¡¢É¾³ı¡¢Çå¿Õ¡¢¸´ÖÆµÈ²Ù×÷¡£
+ * FileUtils å®ç°ç›®å½•ã€æ–‡ä»¶çš„åˆ›å»ºã€åˆ é™¤ã€æ¸…ç©ºã€å¤åˆ¶ç­‰æ“ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class FileUtilsTest {
 
@@ -33,13 +33,13 @@ public class FileUtilsTest {
 		File file2 = new File(basePath + "bak" + File.separator + "test_bak.txt");
 		
 		try {
-			// °´ĞĞ¶ÁÈ¡ÎÄ¼şÖĞµÄÄÚÈİ£¬¿ÉÒÔÖ¸¶¨×Ö·û¼¯
+			// æŒ‰è¡Œè¯»å–æ–‡ä»¶ä¸­çš„å†…å®¹ï¼Œå¯ä»¥æŒ‡å®šå­—ç¬¦é›†
 			List<String> lines = FileUtils.readLines(file, "GBK");
 			for (String line : lines) {
 				System.out.println(line);
 			}
 
-			// ·µ»ØÎÄ¼şÖĞÃ¿ĞĞÄÚÈİµÄµü´úÆ÷
+			// è¿”å›æ–‡ä»¶ä¸­æ¯è¡Œå†…å®¹çš„è¿­ä»£å™¨
 			LineIterator it = FileUtils.lineIterator(file);
 			try {
 				while (it.hasNext()) {
@@ -50,23 +50,23 @@ public class FileUtilsTest {
 				LineIterator.closeQuietly(it);
 			}
 
-			// ¸´ÖÆÎÄ¼ş
+			// å¤åˆ¶æ–‡ä»¶
 			FileUtils.copyFile(file, file2);
-			// ½«ÎÄ¼ş¸´ÖÆµ½ÁíÒ»¸öÄ¿Â¼ÏÂ
+			// å°†æ–‡ä»¶å¤åˆ¶åˆ°å¦ä¸€ä¸ªç›®å½•ä¸‹
 			FileUtils.copyFileToDirectory(file, new File(basePath + "bak"
 					+ File.separator), true);
-			// ½«java.net.URLÀàµÄcontentĞ´µ½Ö¸¶¨ÎÄ¼şÖĞ
+			// å°†java.net.URLç±»çš„contentå†™åˆ°æŒ‡å®šæ–‡ä»¶ä¸­
 			FileUtils.copyURLToFile(new URL(url), new File(basePath
 					+ "baidu.html"));
-			// ½«InputStreamÖĞµÄÄÚÈİĞ´µ½Ö¸¶¨µÄÎÄ¼şÖĞ
+			// å°†InputStreamä¸­çš„å†…å®¹å†™åˆ°æŒ‡å®šçš„æ–‡ä»¶ä¸­
 			FileUtils.copyInputStreamToFile(new URL(url).openStream(),
 					new File(basePath + "baidu2.html"));
-			// ¸´ÖÆÒ»¸öÄ¿Â¼ÏÂµÄËùÓĞÄÚÈİµ½ÁíÒ»Ä¿Â¼ÏÂ
+			// å¤åˆ¶ä¸€ä¸ªç›®å½•ä¸‹çš„æ‰€æœ‰å†…å®¹åˆ°å¦ä¸€ç›®å½•ä¸‹
 			FileUtils.copyDirectory(new File(basePath + "bak"), new File(
 					basePath + "bak2"));
-			// É¾³ıÄ¿Â¼µÄËùÓĞÄÚÈİ
+			// åˆ é™¤ç›®å½•çš„æ‰€æœ‰å†…å®¹
 			FileUtils.deleteDirectory(new File(basePath + "bak"));
-			// ÔÚÖ¸¶¨µÄÄ¿Â¼ÖĞ²éÕÒÀ©Õ¹ÃûÎªÖ¸¶¨²ÎÊıµÄÎÄ¼ş£¬µÚÈı¸ö²ÎÊıÊÇ·ñµİ¹é²éÕÒ
+			// åœ¨æŒ‡å®šçš„ç›®å½•ä¸­æŸ¥æ‰¾æ‰©å±•åä¸ºæŒ‡å®šå‚æ•°çš„æ–‡ä»¶ï¼Œç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯å¦é€’å½’æŸ¥æ‰¾
 			Collection<File> subFiles = FileUtils.listFiles(new File(basePath),
 					new String[] { "html" }, false);
 			System.out.println(subFiles.size());

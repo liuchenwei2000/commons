@@ -7,15 +7,15 @@ import org.apache.commons.collections4.MultiMap;
 import org.apache.commons.collections4.map.MultiValueMap;
 
 /**
- * MultiMapÊ¾Àı
+ * MultiMapç¤ºä¾‹
  * <p>
- * ¾ÍÊÇËµÒ»¸ö key ²»ÔÙÊÇ¼òµ¥µÄÖ¸ÏòÒ»¸ö¶ÔÏó£¬¶øÊÇÒ»×é¶ÔÏó¡£
- * put()µÄÊ±ºò¸úÆÕÍ¨µÄMapÎŞÒì£¬Ö»ÊÇÔÚget()Ê±·µ»ØÒ»¸öCollection¡£
- * ÀûÓÃMultiMap£¬¿ÉÒÔºÜ·½±ãµÄÍùÒ»¸ökeyÉÏ·ÅÊıÁ¿²»¶¨µÄ¶ÔÏó£¬Ò²¾ÍÊµÏÖÁËÒ»¶Ô¶à¡£
+ * å°±æ˜¯è¯´ä¸€ä¸ª key ä¸å†æ˜¯ç®€å•çš„æŒ‡å‘ä¸€ä¸ªå¯¹è±¡ï¼Œè€Œæ˜¯ä¸€ç»„å¯¹è±¡ã€‚
+ * put()çš„æ—¶å€™è·Ÿæ™®é€šçš„Mapæ— å¼‚ï¼Œåªæ˜¯åœ¨get()æ—¶è¿”å›ä¸€ä¸ªCollectionã€‚
+ * åˆ©ç”¨MultiMapï¼Œå¯ä»¥å¾ˆæ–¹ä¾¿çš„å¾€ä¸€ä¸ªkeyä¸Šæ”¾æ•°é‡ä¸å®šçš„å¯¹è±¡ï¼Œä¹Ÿå°±å®ç°äº†ä¸€å¯¹å¤šã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ28ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ28æ—¥
  */
 public class MultiMapTest {
 
@@ -23,20 +23,20 @@ public class MultiMapTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// MultiValueMap ÊÇ MultiMap µÄÒ»¸ö±ê×¼ÊµÏÖ¡£
+		// MultiValueMap æ˜¯ MultiMap çš„ä¸€ä¸ªæ ‡å‡†å®ç°ã€‚
 		MultiMap<String, String> one_more_map = new MultiValueMap<String, String>();
 		one_more_map.put("country", "China");
 		one_more_map.put("country", "USA");
 		one_more_map.put("country", "Japan");
 		one_more_map.put("city", "Beijing");
 		one_more_map.put("city", "Washington");
-		// ·µ»ØÒ»¸öCollection£¬°üº¬ key ¶ÔÓ¦µÄËùÓĞ value 
+		// è¿”å›ä¸€ä¸ªCollectionï¼ŒåŒ…å« key å¯¹åº”çš„æ‰€æœ‰ value 
 		System.out.println("country : " + one_more_map.get("country"));
 		System.out.println("city : " + one_more_map.get("city"));
-		// ÒÆ³ı key µÄËùÓĞÓ³Éä¹ØÏµ
+		// ç§»é™¤ key çš„æ‰€æœ‰æ˜ å°„å…³ç³»
 		one_more_map.remove("city");
 		System.out.println("after remove city, map : " + one_more_map);
-		// ÒÆ³ıÖ¸¶¨µÄ key-value Ó³Éä¹ØÏµ
+		// ç§»é™¤æŒ‡å®šçš„ key-value æ˜ å°„å…³ç³»
 		one_more_map.removeMapping("country", "Japan");
 		System.out.println("after remove Japan, map : " + one_more_map);
 	}

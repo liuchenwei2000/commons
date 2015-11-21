@@ -6,11 +6,11 @@ package test;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * StringUtilsÊ¾Àı
+ * StringUtilsç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-30
  */
 public class StringUtilsTest {
 	
@@ -26,19 +26,19 @@ public class StringUtilsTest {
 		String str6 = "ABCDEFG";
 		String str7 = "It feels good to use Jakarta Commons.\r\n";
 
-		// ÅĞ¶ÏÊÇ·ñÊÇ¿Õ´®
+		// åˆ¤æ–­æ˜¯å¦æ˜¯ç©ºä¸²
 		System.out.println("==============================");
 		System.out.println("Is str1 blank? " + StringUtils.isBlank(str1));
 		System.out.println("Is str2 blank? " + StringUtils.isBlank(str2));
 		System.out.println("Is str3 blank? " + StringUtils.isBlank(str3));
 		System.out.println("Is str4 blank? " + StringUtils.isBlank(str4));
 
-		// ÅĞ¶ÏÊÇ·ñÊÇÊıÖµ
+		// åˆ¤æ–­æ˜¯å¦æ˜¯æ•°å€¼
 		System.out.println("==============================");
 		System.out.println("Is str5 numeric? " + StringUtils.isNumeric(str5));
 		System.out.println("Is str6 numeric? " + StringUtils.isNumeric(str6));
 
-		// ·­×ª×Ö·û´®
+		// ç¿»è½¬å­—ç¬¦ä¸²
 		System.out.println("==============================");
 		System.out.println("str6: " + str6);
 		System.out.println("str6 reversed: " + StringUtils.reverse(str6));
@@ -47,15 +47,15 @@ public class StringUtilsTest {
 		str8 = StringUtils.reverseDelimited(str8, ' ');
 		System.out.println("str7 reversed whole words : \r\n" + str8);
 
-		// ÆäËûÓÃ·¨
+		// å…¶ä»–ç”¨æ³•
 		System.out.println("==============================");
 		System.out.println("print header:");
-		// ½«"="´òÓ¡50´Î
+		// å°†"="æ‰“å°50æ¬¡
 		String padding = StringUtils.repeat("=", 50);
-		// ½«×Ö·û´®´òÓ¡ÔÚÖĞ¼äÎ»ÖÃ
+		// å°†å­—ç¬¦ä¸²æ‰“å°åœ¨ä¸­é—´ä½ç½®
 		String msg = StringUtils.center(" Customised Header ", 50, "%");
 		Object[] raw = new Object[] { padding, msg, padding };
-		// ½«×Ö·û´®Êı×éÖĞµÄÃ¿¸öÔªËØÊ¹ÓÃÖ¸¶¨µÄ·Ö¸ô·û½øĞĞÁ¬½Ó
+		// å°†å­—ç¬¦ä¸²æ•°ç»„ä¸­çš„æ¯ä¸ªå…ƒç´ ä½¿ç”¨æŒ‡å®šçš„åˆ†éš”ç¬¦è¿›è¡Œè¿æ¥
 		String header = StringUtils.join(raw, "\r\n");
 		System.out.println(header);
 	}

@@ -10,16 +10,16 @@ import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.HtmlEmail;
 
 /**
- * 3,HtmlEmailÊ¾Àý
+ * 3,HtmlEmailç¤ºä¾‹
  * <p>
  * HtmlEmail is used to send HTML formatted email. 
  * A text message can also be set for HTML unaware email clients, such as text-based email clients.
  * <p>
  * HtmlEmail class also inherits from MultiPartEmail, so it is easy to add attachments to the email.
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ11ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ11æ—¥
  */
 public class HtmlEmailTest {
 

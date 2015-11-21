@@ -14,9 +14,9 @@ import org.apache.commons.io.filefilter.OrFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 
 /**
- * commons-IO ÖĞÓĞºÜ¶àFileFilterµÄÊµÏÖ¹©Ê¹ÓÃ¡£
+ * commons-IO ä¸­æœ‰å¾ˆå¤šFileFilterçš„å®ç°ä¾›ä½¿ç”¨ã€‚
  * <p>
- * IOFileFilter ÊÇ¶Ô JDK ÖĞFileFilterºÍFileNameFilterµÄ×éºÏ£¬ÊµÏÖÀàÓĞ£º
+ * IOFileFilter æ˜¯å¯¹ JDK ä¸­FileFilterå’ŒFileNameFilterçš„ç»„åˆï¼Œå®ç°ç±»æœ‰ï¼š
  * DirectoryFilter Only accept directories 
  * PrefixFileFilter Filter based on a prefix
  * SuffixFileFilter Filter based on a suffix
@@ -35,9 +35,9 @@ import org.apache.commons.io.filefilter.SuffixFileFilter;
  * AndFileFilter Combines two filters using a logical AND
  * OrFileFilter Combines two filter using a logical OR
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class FileFilterTest {
 
@@ -48,11 +48,11 @@ public class FileFilterTest {
 		File dir = new File("files");
 		
 		/*
-		 * IOFileFilter ¿ÉÒÔ×éºÏÊ¹ÓÃ£¬±¾Àı¾ÍÊÇÕÒ³ö£º
-		 * À©Õ¹ÃûÎª txt »òÕß bak µÄÎÄ¼ş£¬²¢ÇÒ²»ÊÇÄ¿Â¼ÎÄ¼ş
+		 * IOFileFilter å¯ä»¥ç»„åˆä½¿ç”¨ï¼Œæœ¬ä¾‹å°±æ˜¯æ‰¾å‡ºï¼š
+		 * æ‰©å±•åä¸º txt æˆ–è€… bak çš„æ–‡ä»¶ï¼Œå¹¶ä¸”ä¸æ˜¯ç›®å½•æ–‡ä»¶
 		 */
 		SuffixFileFilter txtFilter = new SuffixFileFilter(".txt");
-		// ´´½¨ IOFileFilter ¶ÔÏóÒ²¿ÉÒÔÓÃÏÂÃæÕâÖÖ¹¤³§·½·¨µÄ·½Ê½
+		// åˆ›å»º IOFileFilter å¯¹è±¡ä¹Ÿå¯ä»¥ç”¨ä¸‹é¢è¿™ç§å·¥å‚æ–¹æ³•çš„æ–¹å¼
 		IOFileFilter bakFilter = FileFilterUtils.suffixFileFilter(".bak");
 		OrFileFilter txtOrBakFilter = new OrFileFilter(txtFilter, bakFilter);
 		NotFileFilter notDirFilter = new NotFileFilter(DirectoryFileFilter.INSTANCE);

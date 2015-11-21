@@ -1,7 +1,7 @@
-commons-Primitives Ìá¹©ÁËÒ»¸ö¸üĞ¡£¬¸ü¿ìºÍ¸üÒ×Ê¹ÓÃµÄ¶ÔJava»ù±¾ÀàĞÍµÄÖ§³Ö¡£µ±Ç°Ö÷ÒªÊÇÕë¶Ô»ù±¾ÀàĞÍµÄ collection¡£
+commons-Primitives æä¾›äº†ä¸€ä¸ªæ›´å°ï¼Œæ›´å¿«å’Œæ›´æ˜“ä½¿ç”¨çš„å¯¹JavaåŸºæœ¬ç±»å‹çš„æ”¯æŒã€‚å½“å‰ä¸»è¦æ˜¯é’ˆå¯¹åŸºæœ¬ç±»å‹çš„ collectionã€‚
 
-¾¡¹ÜJDK1.5Ìá¹©ÁË»ù´¡ÀàĞÍµÄ×Ô¶¯²ğÏä/×°Ïä¹¦ÄÜ£¬µ«ÊÇÕâ¸ö¹¦ÄÜ¶ÔÄÚ´æÏûºÄºÍĞÔÄÜ¶¼ÊÇÓĞÓ°ÏìµÄ¡£
-commons-Primitives ¿ÉÒÔÈİÄÉ»ù´¡ÀàĞÍ£¬²¢ÇÒÌá¹©¸ü¿ìµÄËÙ¶È£¬¸ü¸ßµÄĞÔÄÜ¡£
+å°½ç®¡JDK1.5æä¾›äº†åŸºç¡€ç±»å‹çš„è‡ªåŠ¨æ‹†ç®±/è£…ç®±åŠŸèƒ½ï¼Œä½†æ˜¯è¿™ä¸ªåŠŸèƒ½å¯¹å†…å­˜æ¶ˆè€—å’Œæ€§èƒ½éƒ½æ˜¯æœ‰å½±å“çš„ã€‚
+commons-Primitives å¯ä»¥å®¹çº³åŸºç¡€ç±»å‹ï¼Œå¹¶ä¸”æä¾›æ›´å¿«çš„é€Ÿåº¦ï¼Œæ›´é«˜çš„æ€§èƒ½ã€‚
 
 The primitive collections are most useful for applications that create very many or very large collections of primitive types, 
 or that process them very frequently.

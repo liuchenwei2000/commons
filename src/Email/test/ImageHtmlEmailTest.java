@@ -11,17 +11,17 @@ import org.apache.commons.mail.ImageHtmlEmail;
 import org.apache.commons.mail.resolver.DataSourceFileResolver;
 
 /**
- * 4,ImageHtmlEmailÊ¾Àı
+ * 4,ImageHtmlEmailç¤ºä¾‹
  * <p>
- * MultiPartEmailËäÈ»¿ÉÒÔ½«Í¼Æ¬ÄÚÇ¶µ½htmlÓÊ¼şÖĞ£¬µ«ÊÇÕâĞèÒªÄãÌáÇ°ÖªµÀËùÓĞµÄÍ¼Æ¬Â·¾¶¡£
- * µ±Ê¹ÓÃÒ»¸öhtmlÓÊ¼şÄ£°åµÄÊ±ºò£¬ÕâÖÖ·½Ê½²¢²»±ã½İ¡£
- * ImageHtmlEmailÓÃÀ´½â¾öÕâ¸öÎÊÌâ£¬Ëü¿ÉÒÔ½«ËùÓĞµÄÍâÔÚÍ¼Æ¬×ª»»³ÉÄÚÁªÍ¼Æ¬¡£
+ * MultiPartEmailè™½ç„¶å¯ä»¥å°†å›¾ç‰‡å†…åµŒåˆ°htmlé‚®ä»¶ä¸­ï¼Œä½†æ˜¯è¿™éœ€è¦ä½ æå‰çŸ¥é“æ‰€æœ‰çš„å›¾ç‰‡è·¯å¾„ã€‚
+ * å½“ä½¿ç”¨ä¸€ä¸ªhtmlé‚®ä»¶æ¨¡æ¿çš„æ—¶å€™ï¼Œè¿™ç§æ–¹å¼å¹¶ä¸ä¾¿æ·ã€‚
+ * ImageHtmlEmailç”¨æ¥è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œå®ƒå¯ä»¥å°†æ‰€æœ‰çš„å¤–åœ¨å›¾ç‰‡è½¬æ¢æˆå†…è”å›¾ç‰‡ã€‚
  * <p>
- * ±¾Àı¿ÉÒÔ½«file/htmlsÏÂµÄwelcome.htmlÎÄ¼şÒÔhtml emailµÄĞÎÊ½·¢³ö£¬²¢ÇÒ×Ô¶¯½«ÆäÊ¹ÓÃµ½µÄÍ¼Æ¬ÄÚÁª»¯¡£
+ * æœ¬ä¾‹å¯ä»¥å°†file/htmlsä¸‹çš„welcome.htmlæ–‡ä»¶ä»¥html emailçš„å½¢å¼å‘å‡ºï¼Œå¹¶ä¸”è‡ªåŠ¨å°†å…¶ä½¿ç”¨åˆ°çš„å›¾ç‰‡å†…è”åŒ–ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ11ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ11æ—¥
  */
 public class ImageHtmlEmailTest {
 
@@ -36,7 +36,7 @@ public class ImageHtmlEmailTest {
 			String htmlEmailTemplate = FileUtils.readFileToString(new File(htmlTemplate));
 			// create the email message
 			ImageHtmlEmail email = new ImageHtmlEmail();
-			// ÉèÖÃÒ»¸öDataSourceResolver£¬ÕâÀïÊ¹ÓÃ¿ÉÒÔ½âÎöÎÄ¼şµÄDataSourceFileResolver£¬ÁíÍâ»¹ÓĞ»ùÓÚURLµÈµÄResolver
+			// è®¾ç½®ä¸€ä¸ªDataSourceResolverï¼Œè¿™é‡Œä½¿ç”¨å¯ä»¥è§£ææ–‡ä»¶çš„DataSourceFileResolverï¼Œå¦å¤–è¿˜æœ‰åŸºäºURLç­‰çš„Resolver
 			email.setDataSourceResolver(new DataSourceFileResolver(new File(htmlBaseDir)));
 			email.setHostName(MailInfo.SMTP_HOST);
 			email.setAuthenticator(new DefaultAuthenticator(MailInfo.USER_NAME, MailInfo.PASSWORD));

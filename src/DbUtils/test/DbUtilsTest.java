@@ -19,11 +19,11 @@ import bean.PersonVO;
 import datasource.OracleDataSource;
 
 /**
- * DbUtilsÊ¹ÓÃÊ¾Àı
+ * DbUtilsä½¿ç”¨ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ27ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ27æ—¥
  */
 public class DbUtilsTest {
 
@@ -43,95 +43,95 @@ public class DbUtilsTest {
 	}
 
 	/**
-	 * ²åÈë
+	 * æ’å…¥
 	 */
 	private static void testInsert(DataSource ds) throws SQLException {
-		// µÚÒ»ÖÖ·½Ê½£¬ÍêÈ«SQLÓï¾ä²åÈë
+		// ç¬¬ä¸€ç§æ–¹å¼ï¼Œå®Œå…¨SQLè¯­å¥æ’å…¥
 		String sql = "INSERT INTO person (id, name, age, address) VALUES ('00001', 'Tom', 21, 'address001')";
-		// Ã¿¸öSQLµÄÖ´ĞĞ¶¼ĞèÒªÓÃµ½QueryRunner£¬ÕâÆäÊµÊÇÒ»¸öÆÕÍ¨µÄÀà£¬·ÇÏß³Ì°²È«¡£
-		// ÔÚ´´½¨QueryRunner¶ÔÏóµÄÊ±ºò£¬Ã¿´Î¶¼Òªnew¡£
+		// æ¯ä¸ªSQLçš„æ‰§è¡Œéƒ½éœ€è¦ç”¨åˆ°QueryRunnerï¼Œè¿™å…¶å®æ˜¯ä¸€ä¸ªæ™®é€šçš„ç±»ï¼Œéçº¿ç¨‹å®‰å…¨ã€‚
+		// åœ¨åˆ›å»ºQueryRunnerå¯¹è±¡çš„æ—¶å€™ï¼Œæ¯æ¬¡éƒ½è¦newã€‚
 		QueryRunner runner = new QueryRunner(ds);
 		runner.update(sql);
 		
-		// µÚ¶şÖÖ·½Ê½£¬SQLÓï¾ä+²ÎÊı²åÈë£¬ÕâÁ½ÖÖ·½Ê½Í¬ÑùÊÊÓÃÓÚCRUDËÄÖÖ³¡¾°
-		String sql2 = "INSERT INTO person (id, name, age, address) VALUES (?, ?, ?, ?)";// ? ×÷ÎªÍ¨Åä·û
+		// ç¬¬äºŒç§æ–¹å¼ï¼ŒSQLè¯­å¥+å‚æ•°æ’å…¥ï¼Œè¿™ä¸¤ç§æ–¹å¼åŒæ ·é€‚ç”¨äºCRUDå››ç§åœºæ™¯
+		String sql2 = "INSERT INTO person (id, name, age, address) VALUES (?, ?, ?, ?)";// ? ä½œä¸ºé€šé…ç¬¦
 		QueryRunner runner2 = new QueryRunner(ds);
-		// Í¨¹ı¿É±ä²ÎÊıµÄupdate·½·¨´«Èë²ÎÊıÖµ£¬Ë³ĞòÓëÉÏÃæSQLÖĞµÄÍ¨Åä·ûÆ¥Åä
+		// é€šè¿‡å¯å˜å‚æ•°çš„updateæ–¹æ³•ä¼ å…¥å‚æ•°å€¼ï¼Œé¡ºåºä¸ä¸Šé¢SQLä¸­çš„é€šé…ç¬¦åŒ¹é…
 		runner2.update(sql2, "00002", "Jerry", 16, "address002");
 		
-		// ÅúÁ¿²åÈë£¬±ØĞëÊ¹ÓÃÍ¨Åä·ûĞÎÊ½µÄSQL
+		// æ‰¹é‡æ’å…¥ï¼Œå¿…é¡»ä½¿ç”¨é€šé…ç¬¦å½¢å¼çš„SQL
 		String sql3 = "INSERT INTO person (id, name, age, address) VALUES (?, ?, ?, ?)";
 		QueryRunner runner3 = new QueryRunner(ds);
-		// Í¨¹ı¿É±ä²ÎÊıµÄupdate·½·¨´«Èë²ÎÊıÖµ£¬Ë³ĞòÓëÉÏÃæSQLÖĞµÄÍ¨Åä·ûÆ¥Åä
+		// é€šè¿‡å¯å˜å‚æ•°çš„updateæ–¹æ³•ä¼ å…¥å‚æ•°å€¼ï¼Œé¡ºåºä¸ä¸Šé¢SQLä¸­çš„é€šé…ç¬¦åŒ¹é…
 		Object[] row1 = new Object[] { "00003", "Lily", 17, "address003" };
 		Object[] row2 = new Object[] { "00004", "Susan", 27, "address004" };
 		Object[] row3 = new Object[] { "00005", "Jimmy", 12, "address005" };
 		Object[][] rows = new Object[][] { row1, row2, row3 };
-		runner3.batch(sql3, rows);// ÅúÁ¿²åÈëÈıÌõÊı¾İ
+		runner3.batch(sql3, rows);// æ‰¹é‡æ’å…¥ä¸‰æ¡æ•°æ®
 		
-		System.out.println("²åÈë³É¹¦......");
+		System.out.println("æ’å…¥æˆåŠŸ......");
 	}
 
 	/**
-	 * ¸üĞÂ
+	 * æ›´æ–°
 	 */
 	private static void testUpdate(DataSource ds) throws SQLException {
 		String sql = "UPDATE person SET NAME = ?, age = ?, address = ? WHERE id = ?";
 		QueryRunner runner = new QueryRunner(); 
 		Connection connection = ds.getConnection();
 		try {
-			// QueryRunner Ò²¿ÉÒÔÖ±½ÓÊ¹ÓÃ connection ¶ÔÏó½øĞĞ²Ù×÷£¬¶øÎŞĞèÍ¨¹ıDataSource¹¹Ôì¡£
+			// QueryRunner ä¹Ÿå¯ä»¥ç›´æ¥ä½¿ç”¨ connection å¯¹è±¡è¿›è¡Œæ“ä½œï¼Œè€Œæ— éœ€é€šè¿‡DataSourceæ„é€ ã€‚
 			runner.update(connection, sql, "Ann", 23, "new address", "00001");
-			System.out.println("¸üĞÂ³É¹¦......");
+			System.out.println("æ›´æ–°æˆåŠŸ......");
 		} finally {
-			// ×îºóĞèÒªÊÖ¹¤¹Ø±Õconnection£¬DbUtilsÀïÃæÌá¹©ÁËÒ»Ğ©±ã½İ·½·¨¡£
+			// æœ€åéœ€è¦æ‰‹å·¥å…³é—­connectionï¼ŒDbUtilsé‡Œé¢æä¾›äº†ä¸€äº›ä¾¿æ·æ–¹æ³•ã€‚
 			DbUtils.close(connection);
 		}
 	}
 
 	/**
-	 * É¾³ı
+	 * åˆ é™¤
 	 */
 	private static void testDelete(DataSource ds) throws SQLException {
 		String sql = "DELETE FROM person WHERE id = ?";
 		QueryRunner runner = new QueryRunner(ds);
-		// ·µ»ØÓ°ÏìµÄĞĞÊı
+		// è¿”å›å½±å“çš„è¡Œæ•°
 		int result = runner.update(sql, "00003");
 		if (result == 1) {
-			System.out.println("É¾³ı³É¹¦......");
+			System.out.println("åˆ é™¤æˆåŠŸ......");
 		}
 	}
 
 	/**
-	 * ²éÑ¯
+	 * æŸ¥è¯¢
 	 */
 	private static void testQuery(DataSource ds) throws SQLException {
 		/**
-		 * DbUtilsÌá¹©ÁËÒ»Ğ©³£ÓÃµÄResultSetHandlerÊµÏÖ£¬¿ÉÒÔ½«½á¹û¼¯·â×°Îª¸÷ÖÖÀàĞÍ£º
+		 * DbUtilsæä¾›äº†ä¸€äº›å¸¸ç”¨çš„ResultSetHandlerå®ç°ï¼Œå¯ä»¥å°†ç»“æœé›†å°è£…ä¸ºå„ç§ç±»å‹ï¼š
 		 * 
-		 * ArrayHandler£º°Ñ½á¹û¼¯ÖĞµÄµÚÒ»ĞĞÊı¾İ×ª³É¶ÔÏóÊı×é¡£
-		 * ArrayListHandler£º°Ñ½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞÊı¾İ¶¼×ª³ÉÒ»¸ö¶ÔÏóÊı×é£¬ÔÙ´æ·Åµ½ListÖĞ¡£
-		 * BeanHandler£º½«½á¹û¼¯ÖĞµÄµÚÒ»ĞĞÊı¾İ·â×°µ½Ò»¸ö¶ÔÓ¦µÄJavaBeanÊµÀıÖĞ¡£
-		 * BeanListHandler£º½«½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞÊı¾İ¶¼·â×°µ½Ò»¸ö¶ÔÓ¦µÄJavaBeanÊµÀıÖĞ£¬´æ·Åµ½ListÀï¡£
-		 * ColumnListHandler£º½«½á¹û¼¯ÖĞÄ³Ò»ÁĞµÄÊı¾İ´æ·Åµ½ListÖĞ¡£
-		 * KeyedHandler£º½«½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞÊı¾İ¶¼·â×°µ½Ò»¸öMapÀï£¬È»ºóÔÙ¸ù¾İÖ¸¶¨µÄkey°ÑÃ¿¸öMapÔÙ´æ·Åµ½Ò»¸öMapÀï¡£
-		 * MapHandler£º½«½á¹û¼¯ÖĞµÄµÚÒ»ĞĞÊı¾İ·â×°µ½Ò»¸öMapÀï£¬keyÊÇÁĞÃû£¬value¾ÍÊÇ¶ÔÓ¦µÄÖµ¡£
-		 * MapListHandler£º½«½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞÊı¾İ¶¼·â×°µ½Ò»¸öMapÀï£¬È»ºóÔÙ´æ·Åµ½List¡£
-		 * ScalarHandler£º½«½á¹û¼¯ÖĞÄ³Ò»Ìõ¼ÇÂ¼µÄÆäÖĞÄ³Ò»ÁĞµÄÊı¾İ´æ³ÉObject¡£
+		 * ArrayHandlerï¼šæŠŠç»“æœé›†ä¸­çš„ç¬¬ä¸€è¡Œæ•°æ®è½¬æˆå¯¹è±¡æ•°ç»„ã€‚
+		 * ArrayListHandlerï¼šæŠŠç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œæ•°æ®éƒ½è½¬æˆä¸€ä¸ªå¯¹è±¡æ•°ç»„ï¼Œå†å­˜æ”¾åˆ°Listä¸­ã€‚
+		 * BeanHandlerï¼šå°†ç»“æœé›†ä¸­çš„ç¬¬ä¸€è¡Œæ•°æ®å°è£…åˆ°ä¸€ä¸ªå¯¹åº”çš„JavaBeanå®ä¾‹ä¸­ã€‚
+		 * BeanListHandlerï¼šå°†ç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œæ•°æ®éƒ½å°è£…åˆ°ä¸€ä¸ªå¯¹åº”çš„JavaBeanå®ä¾‹ä¸­ï¼Œå­˜æ”¾åˆ°Listé‡Œã€‚
+		 * ColumnListHandlerï¼šå°†ç»“æœé›†ä¸­æŸä¸€åˆ—çš„æ•°æ®å­˜æ”¾åˆ°Listä¸­ã€‚
+		 * KeyedHandlerï¼šå°†ç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œæ•°æ®éƒ½å°è£…åˆ°ä¸€ä¸ªMapé‡Œï¼Œç„¶åå†æ ¹æ®æŒ‡å®šçš„keyæŠŠæ¯ä¸ªMapå†å­˜æ”¾åˆ°ä¸€ä¸ªMapé‡Œã€‚
+		 * MapHandlerï¼šå°†ç»“æœé›†ä¸­çš„ç¬¬ä¸€è¡Œæ•°æ®å°è£…åˆ°ä¸€ä¸ªMapé‡Œï¼Œkeyæ˜¯åˆ—åï¼Œvalueå°±æ˜¯å¯¹åº”çš„å€¼ã€‚
+		 * MapListHandlerï¼šå°†ç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œæ•°æ®éƒ½å°è£…åˆ°ä¸€ä¸ªMapé‡Œï¼Œç„¶åå†å­˜æ”¾åˆ°Listã€‚
+		 * ScalarHandlerï¼šå°†ç»“æœé›†ä¸­æŸä¸€æ¡è®°å½•çš„å…¶ä¸­æŸä¸€åˆ—çš„æ•°æ®å­˜æˆObjectã€‚
 		 */
 		String sql = "SELECT * FROM person WHERE id = ?";
 		QueryRunner runner = new QueryRunner(ds);
-		// BeanHandler£º½«½á¹û¼¯ÖĞµÄµÚÒ»ĞĞÊı¾İ·â×°µ½Ò»¸ö¶ÔÓ¦µÄJavaBeanÊµÀıÖĞ¡£
+		// BeanHandlerï¼šå°†ç»“æœé›†ä¸­çš„ç¬¬ä¸€è¡Œæ•°æ®å°è£…åˆ°ä¸€ä¸ªå¯¹åº”çš„JavaBeanå®ä¾‹ä¸­ã€‚
 		ResultSetHandler<PersonVO> handler = new BeanHandler<PersonVO>(PersonVO.class);
 		PersonVO person = runner.query(sql, handler, "00001");
-		System.out.println("²éÑ¯µ½id=00001µÄÈË£º" + person);
+		System.out.println("æŸ¥è¯¢åˆ°id=00001çš„äººï¼š" + person);
 		
 		String sql2 = "SELECT * FROM person";
 		QueryRunner runner2 = new QueryRunner(ds);
-		// BeanListHandler£º½«½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞÊı¾İ¶¼·â×°µ½Ò»¸ö¶ÔÓ¦µÄJavaBeanÊµÀıÖĞ£¬´æ·Åµ½ListÀï¡£
+		// BeanListHandlerï¼šå°†ç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œæ•°æ®éƒ½å°è£…åˆ°ä¸€ä¸ªå¯¹åº”çš„JavaBeanå®ä¾‹ä¸­ï¼Œå­˜æ”¾åˆ°Listé‡Œã€‚
 		BeanListHandler<PersonVO> handler2 = new BeanListHandler<PersonVO>(PersonVO.class);
 		List<PersonVO> persons = runner2.query(sql2, handler2);
-		System.out.println("²éÑ¯µ½ËùÓĞµÄÈË£º" + persons);
+		System.out.println("æŸ¥è¯¢åˆ°æ‰€æœ‰çš„äººï¼š" + persons);
 
 		
 	}

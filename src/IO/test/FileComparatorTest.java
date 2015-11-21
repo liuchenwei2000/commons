@@ -11,11 +11,11 @@ import org.apache.commons.io.comparator.NameFileComparator;
 import org.apache.commons.io.comparator.SizeFileComparator;
 
 /**
- * commons-IO ÖĞÓĞÒ»Ğ©³£¼ûµÄComparator¿É¹©ÎÄ¼şÅÅĞòÊ¹ÓÃ¡£
+ * commons-IO ä¸­æœ‰ä¸€äº›å¸¸è§çš„Comparatorå¯ä¾›æ–‡ä»¶æ’åºä½¿ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class FileComparatorTest {
 
@@ -25,13 +25,13 @@ public class FileComparatorTest {
 	public static void main(String[] args) {
 		File dir = new File("files");
 		File[] files = dir.listFiles();
-		// ÎÄ¼şÃûÅÅĞòÆ÷
+		// æ–‡ä»¶åæ’åºå™¨
 		Arrays.sort(files, new NameFileComparator());
 		System.out.println("sort by name:" + Arrays.asList(files));
-		// ÎÄ¼ş´óĞ¡ÅÅĞòÆ÷
+		// æ–‡ä»¶å¤§å°æ’åºå™¨
 		Arrays.sort(files, new SizeFileComparator());
 		System.out.println("sort by size:" + Arrays.asList(files));
-		// ÎÄ¼ş×îºóĞŞ¸ÄÊ±¼äÅÅĞòÆ÷
+		// æ–‡ä»¶æœ€åä¿®æ”¹æ—¶é—´æ’åºå™¨
 		Arrays.sort(files, new LastModifiedFileComparator());
 		System.out.println("sort by ts:" + Arrays.asList(files));
 	}

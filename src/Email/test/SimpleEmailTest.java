@@ -8,13 +8,13 @@ import org.apache.commons.mail.Email;
 import org.apache.commons.mail.SimpleEmail;
 
 /**
- * 1,SimpleEmailÊ¾Àı
+ * 1,SimpleEmailç¤ºä¾‹
  * <p>
  * SimpleEmail is used to send simple internet email messages without attachments.
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ11ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ11æ—¥
  */
 public class SimpleEmailTest {
 

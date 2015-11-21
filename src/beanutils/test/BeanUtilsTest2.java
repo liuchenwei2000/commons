@@ -12,11 +12,11 @@ import bean.Address;
 import bean.Customer;
 
 /**
- * BeanUtils»ù±¾·½·¨
+ * BeanUtilsåŸºæœ¬æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ26æ—¥
  */
 public class BeanUtilsTest2 {
 
@@ -32,7 +32,7 @@ public class BeanUtilsTest2 {
 			addresses[0].setStreet("Road 1187#");
 
 			addresses[1] = new Address();
-			// Îª¶ÔÏóµÄÖ¸¶¨ÊôĞÔÉèÖµ
+			// ä¸ºå¯¹è±¡çš„æŒ‡å®šå±æ€§è®¾å€¼
 			BeanUtils.setProperty(addresses[1], "country", "China");
 			BeanUtils.setProperty(addresses[1], "city", "Jinan");
 			BeanUtils.setProperty(addresses[1], "street", "Road WenHuaDong");
@@ -47,17 +47,17 @@ public class BeanUtilsTest2 {
 			System.out.println(ori);
 			
 			Customer dest = new Customer();
-			// ½«Ô´¶ÔÏóµÄËùÓĞÊôĞÔ¸´ÖÆ¸øÄ¿±êÊôĞÔ£¬Êµ¼ÊÖ¤Ã÷Ö§³ÖÄÚÖÃ¶ÔÏóµÄÇ³¸´ÖÆ
+			// å°†æºå¯¹è±¡çš„æ‰€æœ‰å±æ€§å¤åˆ¶ç»™ç›®æ ‡å±æ€§ï¼Œå®é™…è¯æ˜æ”¯æŒå†…ç½®å¯¹è±¡çš„æµ…å¤åˆ¶
 			BeanUtils.copyProperties(dest, ori);
 			System.out.println(dest);
 			System.out.println("ori.getAddresses() == dest.getAddresses() is " + (ori.getAddresses() == dest.getAddresses()));
 			System.out.println();
 			
 			System.out.println(BeanUtils.getProperty(dest, "name"));
-			// ¿ÉÒÔÍ¨¹ıÕâÖÖ·½Ê½·ÃÎÊÄÚÖÃ¼¯ºÏ(»òÊı×é)µÄÔªËØ£¬µÈ¼ÛÓÚÒÔÏÂ´úÂë
+			// å¯ä»¥é€šè¿‡è¿™ç§æ–¹å¼è®¿é—®å†…ç½®é›†åˆ(æˆ–æ•°ç»„)çš„å…ƒç´ ï¼Œç­‰ä»·äºä»¥ä¸‹ä»£ç 
 			// dest.getPhoneNumbers().get(0);
 			System.out.println(BeanUtils.getProperty(dest, "phoneNumbers[0]"));
-			// ¿ÉÒÔÍ¨¹ıÕâÖÖ·½Ê½·ÃÎÊÄÚÖÃ¶ÔÏóµÄÊôĞÔ£¬µÈ¼ÛÓÚÒÔÏÂ´úÂë
+			// å¯ä»¥é€šè¿‡è¿™ç§æ–¹å¼è®¿é—®å†…ç½®å¯¹è±¡çš„å±æ€§ï¼Œç­‰ä»·äºä»¥ä¸‹ä»£ç 
 			// dest.getAddresses()[1].getCity();
 			System.out.println(BeanUtils.getProperty(dest, "addresses[1].city"));
 		} catch (IllegalAccessException e) {

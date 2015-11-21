@@ -13,11 +13,11 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.dbcp.BasicDataSourceFactory;
 
 /**
- * Êı¾İÔ´¹ÜÀíÆ÷
+ * æ•°æ®æºç®¡ç†å™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ27ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ27æ—¥
  */
 public class DataSourceManager {
 
@@ -32,7 +32,7 @@ public class DataSourceManager {
 	}
 	
 	/**
-	 * Ê¹ÓÃpropertiesÎÄ¼ş³õÊ¼»¯Êı¾İÔ´
+	 * ä½¿ç”¨propertiesæ–‡ä»¶åˆå§‹åŒ–æ•°æ®æº
 	 */
 	public DataSourceManager(String propertiesFile){
 		Properties dsProperties = new Properties();
@@ -45,22 +45,22 @@ public class DataSourceManager {
 	}
 	
 	/**
-	 * ÓÃÖ¸¶¨²ÎÊıÁ¬½ÓÊı¾İÔ´
+	 * ç”¨æŒ‡å®šå‚æ•°è¿æ¥æ•°æ®æº
 	 * 
 	 * @param connectURI
-	 *            Êı¾İ¿âÁ¬½ÓURL
+	 *            æ•°æ®åº“è¿æ¥URL
 	 * @param user
-	 *            ÓÃ»§Ãû
+	 *            ç”¨æˆ·å
 	 * @param password
-	 *            ÃÜÂë
+	 *            å¯†ç 
 	 * @param initialSize
-	 *            ³õÊ¼Á¬½Ó³ØÁ¬½Ó¸öÊı
+	 *            åˆå§‹è¿æ¥æ± è¿æ¥ä¸ªæ•°
 	 * @param maxActive
-	 *            ×î´ó¼¤»îÁ¬½ÓÊı
+	 *            æœ€å¤§æ¿€æ´»è¿æ¥æ•°
 	 * @param maxIdle
-	 *            ×î´óÏĞÖÃÁ¬½ÓÊı
+	 *            æœ€å¤§é—²ç½®è¿æ¥æ•°
 	 * @param maxWait
-	 *            »ñµÃÁ¬½ÓµÄ×î´óµÈ´ıºÁÃëÊı
+	 *            è·å¾—è¿æ¥çš„æœ€å¤§ç­‰å¾…æ¯«ç§’æ•°
 	 * @return
 	 */
 	private void initDataSource(String url,String user,String password,int initialSize, int maxActive, int maxIdle, int maxWait){
@@ -69,7 +69,7 @@ public class DataSourceManager {
 		basicDataSource.setDriverClassName(getDriverClassName(url));
 		basicDataSource.setUsername(user);
 		basicDataSource.setPassword(password);
-		basicDataSource.setInitialSize(initialSize); // ³õÊ¼µÄÁ¬½ÓÊı
+		basicDataSource.setInitialSize(initialSize); // åˆå§‹çš„è¿æ¥æ•°
 		basicDataSource.setMaxActive(maxActive);
 		basicDataSource.setMaxIdle(maxIdle);
 		basicDataSource.setMaxWait(maxWait);
@@ -95,7 +95,7 @@ public class DataSourceManager {
 		if(dataSource != null){
 			try {
 				Connection connection = dataSource.getConnection();
-				connection.setAutoCommit(false);// °Ñ×Ô¶¯Ìá½»¹Ø±Õ
+				connection.setAutoCommit(false);// æŠŠè‡ªåŠ¨æäº¤å…³é—­
 				return connection;
 			} catch (SQLException e) {
 				e.printStackTrace();

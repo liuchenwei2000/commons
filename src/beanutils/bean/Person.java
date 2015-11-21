@@ -4,11 +4,11 @@
 package bean;
 
 /**
- * Ò»¸öÖ»ÓĞ»ù±¾ÊôĞÔµÄJavaBean
+ * ä¸€ä¸ªåªæœ‰åŸºæœ¬å±æ€§çš„JavaBean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ26æ—¥
  */
 public class Person {
 
@@ -41,6 +41,6 @@ public class Person {
 	}
 	
 	public String toString(){
-		return "¡¾Person name:"+ name + ", age:"+age+", weight:"+weight+" kg.¡¿";
+		return "ã€Person name:"+ name + ", age:"+age+", weight:"+weight+" kg.ã€‘";
 	}
 }

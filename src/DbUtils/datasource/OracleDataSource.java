@@ -11,11 +11,11 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 /**
- * DriverManagerÊµÏÖµÄÊı¾İÔ´
+ * DriverManagerå®ç°çš„æ•°æ®æº
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-5-31
+ * åˆ›å»ºæ—¥æœŸï¼š2013-5-31
  */
 public class OracleDataSource implements DataSource {
 	
@@ -39,11 +39,11 @@ public class OracleDataSource implements DataSource {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¸öÊı¾İ¿âÁ¬½Ó
+	 * è·å–ä¸€ä¸ªæ•°æ®åº“è¿æ¥
 	 */
 	public Connection getConnection() {
 		try {
-			// Ã¿´Î¶¼·µ»ØÒ»¸öĞÂµÄÊı¾İ¿âÁ¬½Ó
+			// æ¯æ¬¡éƒ½è¿”å›ä¸€ä¸ªæ–°çš„æ•°æ®åº“è¿æ¥
 			return DriverManager.getConnection(this.dbUrl, this.user, this.password);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -52,7 +52,7 @@ public class OracleDataSource implements DataSource {
 	}
 	
 	/**
-	 * ÏÂÃæÈ«ÊÇDataSource½Ó¿ÚµÄ·½·¨£¬Ö»ÊµÏÖ±ØĞëµÄ
+	 * ä¸‹é¢å…¨æ˜¯DataSourceæ¥å£çš„æ–¹æ³•ï¼Œåªå®ç°å¿…é¡»çš„
 	 */
 	public Connection getConnection(String username, String password)
 			throws SQLException {

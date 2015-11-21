@@ -12,17 +12,17 @@ import org.apache.commons.collections4.Predicate;
 import org.apache.commons.collections4.PredicateUtils;
 
 /**
- * PredicateÊ¾Àı
+ * Predicateç¤ºä¾‹
  * <p>
- * ËüÒÔÒ»¸ö Object ¶ÔÏóÎª²ÎÊı£¬´¦Àíºó·µ»ØÒ»¸ö boolean Öµ£¬¼ìÑéÄ³¸ö¶ÔÏóÊÇ·ñÂú×ãÄ³¸öÌõ¼ş¡£
+ * å®ƒä»¥ä¸€ä¸ª Object å¯¹è±¡ä¸ºå‚æ•°ï¼Œå¤„ç†åè¿”å›ä¸€ä¸ª boolean å€¼ï¼Œæ£€éªŒæŸä¸ªå¯¹è±¡æ˜¯å¦æ»¡è¶³æŸä¸ªæ¡ä»¶ã€‚
  * <p>
- * ºÍ Comparator¡¢Transformer ºÍ Closure µÈ¶¼ÓĞĞ©ÀàËÆC/C++ÖĞµÄº¯ÊıÖ¸Õë£¬ËüÃÇ¶¼Ö»ÊÇÌá¹©¼òµ¥¶øÃ÷È·¶¨ÒåµÄº¯Êı¹¦ÄÜ¶øÒÑ¡£
+ * å’Œ Comparatorã€Transformer å’Œ Closure ç­‰éƒ½æœ‰äº›ç±»ä¼¼C/C++ä¸­çš„å‡½æ•°æŒ‡é’ˆï¼Œå®ƒä»¬éƒ½åªæ˜¯æä¾›ç®€å•è€Œæ˜ç¡®å®šä¹‰çš„å‡½æ•°åŠŸèƒ½è€Œå·²ã€‚
  * <p>
- * Ò»°ãÔÚÑéÖ¤ºÏ·¨ĞÔ(validation)»òĞèÒª¹ıÂË¹¦ÄÜ(filtering)Ê±Ê¹ÓÃ¡£
+ * ä¸€èˆ¬åœ¨éªŒè¯åˆæ³•æ€§(validation)æˆ–éœ€è¦è¿‡æ»¤åŠŸèƒ½(filtering)æ—¶ä½¿ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-29
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-29
  */
 public class PredicateTest {
 
@@ -35,17 +35,17 @@ public class PredicateTest {
 	}
 
 	/**
-	 * PredicateÌá¹©ÑéÖ¤¹¦ÄÜ
+	 * Predicateæä¾›éªŒè¯åŠŸèƒ½
 	 * <p>
-	 * ³¡¾°:
-	 * ÓÃÓÚÑéÖ¤ÊäÈë²ÎÊıÊÇ·ñºÏ·¨£º·Ç¿Õ¡¢×Ö·û´®¶ÔÏó²¢ÇÒ³¤¶ÈÔÚ6-10Ö®¼ä
+	 * åœºæ™¯:
+	 * ç”¨äºéªŒè¯è¾“å…¥å‚æ•°æ˜¯å¦åˆæ³•ï¼šéç©ºã€å­—ç¬¦ä¸²å¯¹è±¡å¹¶ä¸”é•¿åº¦åœ¨6-10ä¹‹é—´
 	 */
 	private static void validation(){
-		// ·Ç¿Õ Predicate
+		// éç©º Predicate
 		Predicate<Object> nullPredicate = PredicateUtils.notNullPredicate();
-		// String ÊµÀı Predicate
+		// String å®ä¾‹ Predicate
 		Predicate<Object> stringPredicate = PredicateUtils.instanceofPredicate(String.class);
-		// ×Ö·û´®³¤¶È Predicate
+		// å­—ç¬¦ä¸²é•¿åº¦ Predicate
 		Predicate<Object> lengthPredicate = new Predicate<Object>() {
 
 			@Override
@@ -55,27 +55,27 @@ public class PredicateTest {
 			}
 		};
 		/*
-		 * Commons Collections Ìá¹©ÁËÒ»×é¶¨ÒåºÃµÄ Predicate Àà¹©ÎÒÃÇÊ¹ÓÃ£¬ÕâĞ©Àà¶¼·ÅÔÚ org.apache.commons.collections4.functors °üÖĞ¡£
-		 * µ±È»£¬ÎÒÃÇÒ²¿ÉÒÔ×Ô¶¨Òå Predicate£¬Ö»ÒªÊµÏÖÕâ¸ö Predicate ½Ó¿Ú¼´¿É¡£
-		 * ÔÚ Commons Collections ÖĞÒ²¿ÉÒÔºÜ·½±ãÊ¹ÓÃµÄÒ»×éÔ¤¶¨Òå×éºÏ Predicate¡£
-		 * ÎÒÃÇÌá¹© 2 ¸ö»ò²»¶¨ÊıÁ¿¸ö Predicate£¬È»ºó½»¸øËü£¬Ëü¿ÉÒÔ°ïÎÒÃÇ´¦Àí¶îÍâµÄÂß¼­¡£
-		 * Èç £º
-		 * AllPredicate µ±ËùÓĞÄÚ²¿ prodicates ¶¼·µ»Ø true ºó£¬²Å·µ»Ø true¡£
-		 * AnyPredicate ´¦Àí¶à¸ö Predicate£¬µ±ÆäÖĞÒ»¸öÂú×ã¾Í·µ»Ø true¡£
-		 * NonePredicate µ±ËùÓĞÄÚ²¿ prodicates Ê§°Üºó£¬²Å·µ»Ø true¡£
-		 * OnePredicate Ö»ÓĞÒ»¸ö Predicate ·µ»Ø true£¬²Å·µ»Ø true¡£
-		 * AndPredicate Á½¸ö predicates ×ö and£¬Ö»ÓĞµ±Á½Õß¶¼·µ»Ø true ²Å·µ»Ø true¡£
-		 * OrPredicate Á½¸ö predicates ×ö or£¬Ö»ÒªÓĞÒ»¸ö·µ»Øtrue ¾Í·µ»Øtrue¡£
-		 * EqualPredicate ¼ì²éµÄ object ºÍ predicates ÀïÃæÒ»ÑùÊ±·µ»Ø true¡£
-		 * NotPredicate ¶Ô Predicate È¡·´¡£
-		 * IdentityPredicate ÒıÓÃÏàÍ¬Ê±·µ»Øtrue¡£
-		 * InstanceofPredicate ÀàĞÍ·ûºÏÊ±·µ»Øtrue¡£
-		 * NotNullPredicate ·Ç¿ÕÊ±·µ»Øtrue¡£
-		 * NullPredicate ¿ÕÊ±·µ»Øtrue¡£
-		 * NullIsFalsePredicate ÊäÈëÊÇ null ·µ»Ø true¡£
-		 * NullIsTruePredicate ÊäÈëÊÇ null ·µ»Ø false¡£
-		 * TruePredicate ÓÀÔ¶·µ»Ø true¡£
-		 * FalsePredicate ÓÀÔ¶·µ»Ø false¡£
+		 * Commons Collections æä¾›äº†ä¸€ç»„å®šä¹‰å¥½çš„ Predicate ç±»ä¾›æˆ‘ä»¬ä½¿ç”¨ï¼Œè¿™äº›ç±»éƒ½æ”¾åœ¨ org.apache.commons.collections4.functors åŒ…ä¸­ã€‚
+		 * å½“ç„¶ï¼Œæˆ‘ä»¬ä¹Ÿå¯ä»¥è‡ªå®šä¹‰ Predicateï¼Œåªè¦å®ç°è¿™ä¸ª Predicate æ¥å£å³å¯ã€‚
+		 * åœ¨ Commons Collections ä¸­ä¹Ÿå¯ä»¥å¾ˆæ–¹ä¾¿ä½¿ç”¨çš„ä¸€ç»„é¢„å®šä¹‰ç»„åˆ Predicateã€‚
+		 * æˆ‘ä»¬æä¾› 2 ä¸ªæˆ–ä¸å®šæ•°é‡ä¸ª Predicateï¼Œç„¶åäº¤ç»™å®ƒï¼Œå®ƒå¯ä»¥å¸®æˆ‘ä»¬å¤„ç†é¢å¤–çš„é€»è¾‘ã€‚
+		 * å¦‚ ï¼š
+		 * AllPredicate å½“æ‰€æœ‰å†…éƒ¨ prodicates éƒ½è¿”å› true åï¼Œæ‰è¿”å› trueã€‚
+		 * AnyPredicate å¤„ç†å¤šä¸ª Predicateï¼Œå½“å…¶ä¸­ä¸€ä¸ªæ»¡è¶³å°±è¿”å› trueã€‚
+		 * NonePredicate å½“æ‰€æœ‰å†…éƒ¨ prodicates å¤±è´¥åï¼Œæ‰è¿”å› trueã€‚
+		 * OnePredicate åªæœ‰ä¸€ä¸ª Predicate è¿”å› trueï¼Œæ‰è¿”å› trueã€‚
+		 * AndPredicate ä¸¤ä¸ª predicates åš andï¼Œåªæœ‰å½“ä¸¤è€…éƒ½è¿”å› true æ‰è¿”å› trueã€‚
+		 * OrPredicate ä¸¤ä¸ª predicates åš orï¼Œåªè¦æœ‰ä¸€ä¸ªè¿”å›true å°±è¿”å›trueã€‚
+		 * EqualPredicate æ£€æŸ¥çš„ object å’Œ predicates é‡Œé¢ä¸€æ ·æ—¶è¿”å› trueã€‚
+		 * NotPredicate å¯¹ Predicate å–åã€‚
+		 * IdentityPredicate å¼•ç”¨ç›¸åŒæ—¶è¿”å›trueã€‚
+		 * InstanceofPredicate ç±»å‹ç¬¦åˆæ—¶è¿”å›trueã€‚
+		 * NotNullPredicate éç©ºæ—¶è¿”å›trueã€‚
+		 * NullPredicate ç©ºæ—¶è¿”å›trueã€‚
+		 * NullIsFalsePredicate è¾“å…¥æ˜¯ null è¿”å› trueã€‚
+		 * NullIsTruePredicate è¾“å…¥æ˜¯ null è¿”å› falseã€‚
+		 * TruePredicate æ°¸è¿œè¿”å› trueã€‚
+		 * FalsePredicate æ°¸è¿œè¿”å› falseã€‚
 		 */
 		@SuppressWarnings("unchecked")
 		Predicate<Object> allPredicate = PredicateUtils.allPredicate(new Predicate[] { nullPredicate,
@@ -99,7 +99,7 @@ public class PredicateTest {
 	}
 	
 	/**
-	 * PredicateÌá¹©¹ıÂË¹¦ÄÜ
+	 * Predicateæä¾›è¿‡æ»¤åŠŸèƒ½
 	 */
 	private static void filtering(){
 		Student[] students = new Student[]{
@@ -112,7 +112,7 @@ public class PredicateTest {
 				new Student("Susan",46,Sex.FEMALE),
 		};
 		List<Student> allStudent = Arrays.asList(students);
-		// ÊÇ·ñ´æÔÚ 90+ µÄÅ®Ñ§Éú
+		// æ˜¯å¦å­˜åœ¨ 90+ çš„å¥³å­¦ç”Ÿ
 		Predicate<Student> p1 = new Predicate<Student>() {
 
 			@Override
@@ -121,9 +121,9 @@ public class PredicateTest {
 			}
 		};
 		boolean result = CollectionUtils.exists(allStudent, p1);
-		System.out.println("ÊÇ·ñ´æÔÚ 90+ µÄÅ®Ñ§Éú£º" + result);
+		System.out.println("æ˜¯å¦å­˜åœ¨ 90+ çš„å¥³å­¦ç”Ÿï¼š" + result);
 		
-		// Ëæ±ãÕÒÒ»¸ö²»¼°¸ñµÄÑ§Éú
+		// éšä¾¿æ‰¾ä¸€ä¸ªä¸åŠæ ¼çš„å­¦ç”Ÿ
 		Predicate<Student> p2 = new Predicate<Student>() {
 
 			@Override
@@ -132,9 +132,9 @@ public class PredicateTest {
 			}
 		};
 		Student student = CollectionUtils.find(allStudent, p2);
-		System.out.println("Ò»¸ö²»¼°¸ñµÄÑ§Éú£º" + student.getName());
+		System.out.println("ä¸€ä¸ªä¸åŠæ ¼çš„å­¦ç”Ÿï¼š" + student.getName());
 		
-		// ²éÕÒËùÓĞ85·ÖÒÔÉÏµÄÓÅĞãÑ§Éú
+		// æŸ¥æ‰¾æ‰€æœ‰85åˆ†ä»¥ä¸Šçš„ä¼˜ç§€å­¦ç”Ÿ
 		Predicate<Student> p3 = new Predicate<Student>() {
 
 			@Override
@@ -144,6 +144,6 @@ public class PredicateTest {
 		};
 		List<Student> excellentStudents = new ArrayList<Student>(allStudent);
 		CollectionUtils.filter(excellentStudents, p3);
-		System.out.println("85·ÖÒÔÉÏµÄÓÅĞãÑ§ÉúÓĞ£º" + excellentStudents);
+		System.out.println("85åˆ†ä»¥ä¸Šçš„ä¼˜ç§€å­¦ç”Ÿæœ‰ï¼š" + excellentStudents);
 	}
 }

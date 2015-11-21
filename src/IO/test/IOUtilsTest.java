@@ -17,13 +17,13 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 
 /**
- * IOUtilsÊ¾Àı
+ * IOUtilsç¤ºä¾‹
  * <p>
- * IOUtils ÊµÏÖ¶ÔInputStream, OutputStream, Reader, Writer µÄ¶Á¡¢Ğ´¡¢¸´ÖÆ¡£
+ * IOUtils å®ç°å¯¹InputStream, OutputStream, Reader, Writer çš„è¯»ã€å†™ã€å¤åˆ¶ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class IOUtilsTest {
 
@@ -47,7 +47,7 @@ public class IOUtilsTest {
 	}
 
 	/**
-	 * Ê¹ÓÃ´«Í³µÄJava IOÀ´¶ÁÈ¡URLÁ÷
+	 * ä½¿ç”¨ä¼ ç»Ÿçš„Java IOæ¥è¯»å–URLæµ
 	 */
 	private static void readURLByJavaIO(String url) throws MalformedURLException,
 			IOException {
@@ -68,32 +68,32 @@ public class IOUtilsTest {
 	}
 
 	/**
-	 * Ê¹ÓÃ commons-io µÄ IOUtils.toStringÀ´¶ÁÈ¡URLÁ÷
+	 * ä½¿ç”¨ commons-io çš„ IOUtils.toStringæ¥è¯»å–URLæµ
 	 */
 	private static void readURLByCommonsIO1(String url) throws MalformedURLException,
 			IOException {
 		InputStream in = new URL(url).openStream();
 		try {
-			// ½«ÊäÈëÁ÷ÖĞµÄÄÚÈİ×ª³É×Ö·û´®Êä³ö  
+			// å°†è¾“å…¥æµä¸­çš„å†…å®¹è½¬æˆå­—ç¬¦ä¸²è¾“å‡º  
 			String result = IOUtils.toString(in);
 			System.out.println(result);
 		} finally {
 			/*
-			 * ÓĞ¶à¸öÖØĞ´µÄ·½·¨£¬¿ÉÒÔÎŞÌõ¼şµÄ¹Ø±Õ InputStream, OutputStream, Reader, Writer, SocketµÈ¡£
-			 * Ò»°ã·ÅÔÚ finally ¿éÖĞ¡£
+			 * æœ‰å¤šä¸ªé‡å†™çš„æ–¹æ³•ï¼Œå¯ä»¥æ— æ¡ä»¶çš„å…³é—­ InputStream, OutputStream, Reader, Writer, Socketç­‰ã€‚
+			 * ä¸€èˆ¬æ”¾åœ¨ finally å—ä¸­ã€‚
 			 */
 			IOUtils.closeQuietly(in);
 		}
 	}
 	
 	/**
-	 * Ê¹ÓÃ commons-io µÄ IOUtils.readLines À´¶ÁÈ¡URLÁ÷
+	 * ä½¿ç”¨ commons-io çš„ IOUtils.readLines æ¥è¯»å–URLæµ
 	 */
 	private static void readURLByCommonsIO2(String url) throws MalformedURLException,
 			IOException {
 		InputStream in = new URL(url).openStream();
 		try {
-			// ´ÓÒ»¸öÊäÈëÁ÷ÖĞ°´ĞĞ¶ÁÈ¡£¬·µ»ØÒ»¸öList<String>
+			// ä»ä¸€ä¸ªè¾“å…¥æµä¸­æŒ‰è¡Œè¯»å–ï¼Œè¿”å›ä¸€ä¸ªList<String>
 			List<String> lines = IOUtils.readLines(in);
 			for (String line : lines) {
 				System.out.println(line);
@@ -104,8 +104,8 @@ public class IOUtilsTest {
 	}
 	
 	/**
-	 * copy ÏµÁĞµÄÖØÔØ·½·¨£¬¿ÉÒÔ½«ÊäÈëÁ÷µÄÄÚÈİÖ±½ÓĞ´µ½Êä³öÁ÷ÀïÃæÈ¥¡£
-	 * InputStream||Reader --> OutputStream||Writer (¿ÉÖ¸¶¨×Ö·û¼¯)
+	 * copy ç³»åˆ—çš„é‡è½½æ–¹æ³•ï¼Œå¯ä»¥å°†è¾“å…¥æµçš„å†…å®¹ç›´æ¥å†™åˆ°è¾“å‡ºæµé‡Œé¢å»ã€‚
+	 * InputStream||Reader --> OutputStream||Writer (å¯æŒ‡å®šå­—ç¬¦é›†)
 	 */
 	private static void copyBetweenIOStream(String url) throws MalformedURLException, IOException{
 		InputStream in = new URL(url).openStream();

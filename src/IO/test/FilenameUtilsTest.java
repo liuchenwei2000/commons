@@ -6,13 +6,13 @@ package test;
 import org.apache.commons.io.FilenameUtils;
 
 /**
- * FilenameUtilsÊ¾Àı
+ * FilenameUtilsç¤ºä¾‹
  * <p>
- * FilenameUtils ÊÇÎÄ¼şÃûºÍÎÄ¼şÂ·¾¶µÄ²Ù×÷¹¤¾ß£¬ÆÁ±Î²»Í¬²Ù×÷ÏµÍ³µÄÎÄ¼şÏµÍ³²îÒì¡£
+ * FilenameUtils æ˜¯æ–‡ä»¶åå’Œæ–‡ä»¶è·¯å¾„çš„æ“ä½œå·¥å…·ï¼Œå±è”½ä¸åŒæ“ä½œç³»ç»Ÿçš„æ–‡ä»¶ç³»ç»Ÿå·®å¼‚ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-6
  */
 public class FilenameUtilsTest {
 
@@ -21,17 +21,17 @@ public class FilenameUtilsTest {
 	 */
 	public static void main(String[] args) {
 		String path = "C:/Windows/system32/./bak2/../cmd.exe";
-		// È¥µô×Ö·û´®ÖĞµÄ .&&..
+		// å»æ‰å­—ç¬¦ä¸²ä¸­çš„ .&&..
 		System.out.println(FilenameUtils.normalize(path)); // C:\Windows\system32\cmd.exe
-		// Â·¾¶Ç°×º
+		// è·¯å¾„å‰ç¼€
 		System.out.println(FilenameUtils.getPrefix(path)); // C:/
-		// ÎÄ¼şÃû
+		// æ–‡ä»¶å
 		System.out.println(FilenameUtils.getBaseName(path)); // cmd
-		// ÎÄ¼şÀ©Õ¹Ãû
+		// æ–‡ä»¶æ‰©å±•å
 		System.out.println(FilenameUtils.getExtension(path)); // exe
-		// ÎÄ¼şÃû+À©Õ¹Ãû
+		// æ–‡ä»¶å+æ‰©å±•å
 		System.out.println(FilenameUtils.getName(path)); // cmd.exe
-		// ÎÄ¼şÈ«Â·¾¶
+		// æ–‡ä»¶å…¨è·¯å¾„
 		System.out.println(FilenameUtils.getFullPath(path)); // C:/Windows/system32/./bak2/../
 	}
 }

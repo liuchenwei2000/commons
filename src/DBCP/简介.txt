@@ -1,3 +1,3 @@
-DBCP £¨Database Connection Pool£©ÊÇÒ»¸öÒÀÀµJakarta commons-pool¶ÔÏó³Ø»úÖÆµÄÊı¾İ¿âÁ¬½Ó³Ø¡£
+DBCP ï¼ˆDatabase Connection Poolï¼‰æ˜¯ä¸€ä¸ªä¾èµ–Jakarta commons-poolå¯¹è±¡æ± æœºåˆ¶çš„æ•°æ®åº“è¿æ¥æ± ã€‚
 
-commons-dbpc ÒÀÀµÓÚ commons-collections.jar¡¢commons-pool.jar¡£
+commons-dbpc ä¾èµ–äº commons-collections.jarã€commons-pool.jarã€‚

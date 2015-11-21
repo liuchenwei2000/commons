@@ -12,11 +12,11 @@ import org.apache.commons.beanutils.BeanUtils;
 import bean.Person;
 
 /**
- * BeanUtils»ù±¾·½·¨
+ * BeanUtilsåŸºæœ¬æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ26æ—¥
  */
 public class BeanUtilsTest1 {
 
@@ -32,10 +32,10 @@ public class BeanUtilsTest1 {
 
 		Person dest = new Person();
 		try {
-			// ½«Ô´¶ÔÏóµÄËùÓĞÊôĞÔ¸´ÖÆ¸øÄ¿±êÊôĞÔ
+			// å°†æºå¯¹è±¡çš„æ‰€æœ‰å±æ€§å¤åˆ¶ç»™ç›®æ ‡å±æ€§
 			BeanUtils.copyProperties(dest, ori);
 			System.out.println(dest);
-			// ·µ»ØÔ´¶ÔÏóµÄÖ¸¶¨ÊôĞÔÖµ
+			// è¿”å›æºå¯¹è±¡çš„æŒ‡å®šå±æ€§å€¼
 			System.out.println(BeanUtils.getProperty(dest, "name"));
 			System.out.println(BeanUtils.getProperty(dest, "age"));
 			System.out.println(BeanUtils.getProperty(dest, "weight"));
@@ -45,7 +45,7 @@ public class BeanUtilsTest1 {
 			properties.put("name", "Jerry");
 			properties.put("age", 18);
 			properties.put("weight", 20.4);
-			// Ê¹ÓÃ ÊôĞÔÃû_ÊôĞÔÖµ µÄ map ¶ÔJavaBean½øĞĞÊôĞÔÌî³ä
+			// ä½¿ç”¨ å±æ€§å_å±æ€§å€¼ çš„ map å¯¹JavaBeanè¿›è¡Œå±æ€§å¡«å……
 			BeanUtils.populate(ori, properties);
 			System.out.println(ori);
 		} catch (IllegalAccessException e) {

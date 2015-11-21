@@ -7,17 +7,17 @@ import org.apache.commons.collections4.BidiMap;
 import org.apache.commons.collections4.bidimap.DualHashBidiMap;
 
 /**
- * BidiMapÊ¾Àı
+ * BidiMapç¤ºä¾‹
  * <p>
- * ËùÎ½ BidiMap£¬Ö±Òë¾ÍÊÇË«Ïò Map£¬¿ÉÒÔÍ¨¹ı key ÕÒµ½ value£¬Ò²¿ÉÒÔÍ¨¹ı value ÕÒµ½ key¡£
+ * æ‰€è°“ BidiMapï¼Œç›´è¯‘å°±æ˜¯åŒå‘ Mapï¼Œå¯ä»¥é€šè¿‡ key æ‰¾åˆ° valueï¼Œä¹Ÿå¯ä»¥é€šè¿‡ value æ‰¾åˆ° keyã€‚
  * <p>
- * ÕâÔÚÎÒÃÇÈÕ³£µÄ±àÂë-Ãû³ÆÆ¥ÅäµÄÊ±ºòºÜ·½±ã£º
- * ÒòÎªÎÒÃÇ³ıÁËĞèÒªÍ¨¹ı±àÂëÕÒµ½Ãû³ÆÖ®Íâ£¬ÍùÍùÒ²ĞèÒª´¦ÀíÓÃ»§ÊäÈëµÄÃû³Æ£¬È»ºó»ñÈ¡Æä±àÂë¡£
- * ĞèÒª×¢ÒâµÄÊÇ BidiMap µ±ÖĞ²»¹â  key ²»ÄÜÖØ¸´£¬value Ò²²»¿ÉÒÔ¡£
+ * è¿™åœ¨æˆ‘ä»¬æ—¥å¸¸çš„ç¼–ç -åç§°åŒ¹é…çš„æ—¶å€™å¾ˆæ–¹ä¾¿ï¼š
+ * å› ä¸ºæˆ‘ä»¬é™¤äº†éœ€è¦é€šè¿‡ç¼–ç æ‰¾åˆ°åç§°ä¹‹å¤–ï¼Œå¾€å¾€ä¹Ÿéœ€è¦å¤„ç†ç”¨æˆ·è¾“å…¥çš„åç§°ï¼Œç„¶åè·å–å…¶ç¼–ç ã€‚
+ * éœ€è¦æ³¨æ„çš„æ˜¯ BidiMap å½“ä¸­ä¸å…‰  key ä¸èƒ½é‡å¤ï¼Œvalue ä¹Ÿä¸å¯ä»¥ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ28ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ28æ—¥
  */
 public class BidiMapTest {
 
@@ -25,17 +25,17 @@ public class BidiMapTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// DualHashBidiMap ÊÇ BidiMap µÄÒ»¸ö±ê×¼ÊµÏÖ¡£
+		// DualHashBidiMap æ˜¯ BidiMap çš„ä¸€ä¸ªæ ‡å‡†å®ç°ã€‚
 		BidiMap<String, String> code_name_map = new DualHashBidiMap<String, String>();
 		code_name_map.put("A", "B");
 		code_name_map.put("A", "C");
-		// Ö»´æÔÚ A=C µÄÓ³Éä
+		// åªå­˜åœ¨ A=C çš„æ˜ å°„
 		System.out.println(code_name_map);
 
 		code_name_map.clear();
 		code_name_map.put("B", "A");
 		code_name_map.put("C", "A");
-		// Ö»´æÔÚ C=A µÄÓ³Éä£¬Ö¤Ã÷ÁË value Ò²²»¿ÉÒÔÖØ¸´¡£
+		// åªå­˜åœ¨ C=A çš„æ˜ å°„ï¼Œè¯æ˜äº† value ä¹Ÿä¸å¯ä»¥é‡å¤ã€‚
 		System.out.println(code_name_map);
 
 		code_name_map.clear();
@@ -43,13 +43,13 @@ public class BidiMapTest {
 		code_name_map.put("SH", "Shanghai");
 		code_name_map.put("GZ", "Guangzhou");
 		code_name_map.put("TJ", "Tianjin");
-		// Í¨¹ı key »ñÈ¡ value
+		// é€šè¿‡ key è·å– value
 		System.out.println("BJ=" + code_name_map.get("BJ"));
-		// Í¨¹ı value »ñÈ¡ key
+		// é€šè¿‡ value è·å– key
 		System.out.println("Guangzhou=" + code_name_map.getKey("Guangzhou"));
-		// ½« map µÄ key-value ¶Ô½øĞĞ·­×ª²úÉúÒ»¸öĞÂµÄBidiMap²¢·µ»Ø
+		// å°† map çš„ key-value å¯¹è¿›è¡Œç¿»è½¬äº§ç”Ÿä¸€ä¸ªæ–°çš„BidiMapå¹¶è¿”å›
 		System.out.println(code_name_map.inverseBidiMap());
-		// ¸ù¾İÖ¸¶¨µÄ value É¾³ıÒ»¸ö key-balue ¶Ô
+		// æ ¹æ®æŒ‡å®šçš„ value åˆ é™¤ä¸€ä¸ª key-balue å¯¹
 		code_name_map.removeValue("Shanghai");
 		System.out.println("remove Shanghai : " + code_name_map);
 	}

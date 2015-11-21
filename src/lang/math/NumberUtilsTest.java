@@ -6,13 +6,13 @@ package math;
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
- * NumberUtilsÊ¾Àı
+ * NumberUtilsç¤ºä¾‹
  * <p>
- * Ìá¹©´¦ÀíNumber¶ÔÏóµÄ¹¦ÄÜ¡£
+ * æä¾›å¤„ç†Numberå¯¹è±¡çš„åŠŸèƒ½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-30
  */
 public class NumberUtilsTest {
 
@@ -20,25 +20,25 @@ public class NumberUtilsTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ¸ù¾İ×Ö·û´®´´½¨BigInteger
+		// æ ¹æ®å­—ç¬¦ä¸²åˆ›å»ºBigInteger
 		System.out.println(NumberUtils.createBigInteger("123456789011223344"));
-		// ¸ù¾İ×Ö·û´®´´½¨BigInteger
+		// æ ¹æ®å­—ç¬¦ä¸²åˆ›å»ºBigInteger
 		System.out.println(NumberUtils.createBigDecimal("1.98765432109876544333221"));
 		
-		// ¸ù¾İ×Ö·û´®´´½¨Double¶ÔÏó£¬ÀàËÆµÄ»¹ÓĞint¡¢float¡¢long·½·¨
+		// æ ¹æ®å­—ç¬¦ä¸²åˆ›å»ºDoubleå¯¹è±¡ï¼Œç±»ä¼¼çš„è¿˜æœ‰intã€floatã€longæ–¹æ³•
 		System.out.println(NumberUtils.createDouble("1.9876"));
-		// ½«×Ö·û´®×ª»»Îªdouble£¬ÀàËÆµÄ»¹ÓĞint¡¢float¡¢long¡¢short¡¢byte·½·¨
+		// å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºdoubleï¼Œç±»ä¼¼çš„è¿˜æœ‰intã€floatã€longã€shortã€byteæ–¹æ³•
 		System.out.println(NumberUtils.toDouble("1.9876"));
 		
-		// ÅĞ¶Ï×Ö·û´®ÊÇ·ñÖ»°üº¬Êı×Ö
+		// åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦åªåŒ…å«æ•°å­—
 		System.out.println(NumberUtils.isDigits("1.9876"));
-		// ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇÊı×Ö
+		// åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯æ•°å­—
 		System.out.println(NumberUtils.isNumber("1.9876"));
 		
 		int[] array = { 52, 43, 93, 5, 62, 57, 28, 79, 20 };
-		// ·µ»ØÊı×éÖĞµÄ×î´óÖµ£¬ÀàËÆµÄ»¹ÓĞdouble¡¢float¡¢long¡¢short¡¢byte·½·¨
+		// è¿”å›æ•°ç»„ä¸­çš„æœ€å¤§å€¼ï¼Œç±»ä¼¼çš„è¿˜æœ‰doubleã€floatã€longã€shortã€byteæ–¹æ³•
 		System.out.println(NumberUtils.max(array));
-		// ·µ»ØÊı×éÖĞµÄ×îĞ¡Öµ£¬ÀàËÆµÄ»¹ÓĞdouble¡¢float¡¢long¡¢short¡¢byte·½·¨
+		// è¿”å›æ•°ç»„ä¸­çš„æœ€å°å€¼ï¼Œç±»ä¼¼çš„è¿˜æœ‰doubleã€floatã€longã€shortã€byteæ–¹æ³•
 		System.out.println(NumberUtils.min(array));
 	}
 }

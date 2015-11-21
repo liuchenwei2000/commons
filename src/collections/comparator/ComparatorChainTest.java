@@ -12,18 +12,18 @@ import org.apache.commons.collections4.comparators.ComparatorChain;
 import org.apache.commons.collections4.comparators.FixedOrderComparator;
 
 /**
- * ComparatorChainÊ¾Àı
+ * ComparatorChainç¤ºä¾‹
  * <p>
- * ±È½ÏÆ÷Á´¿ÉÒÔÌí¼Ó¶à¸ö±È½ÏÆ÷£¬Ö±µ½
- * 1£¬ÈÎºÎµ¥¸ö±È½ÏÆ÷·µ»ØÒ»¸ö·ÇÁãµÄ½á¹û£¬È»ºó½«¸Ã½á¹û·µ»Ø£¬»ò
- * 2£¬ComparatorChainÖ´ĞĞ½áÊø£¬²¢·µ»ØÁã¡£
+ * æ¯”è¾ƒå™¨é“¾å¯ä»¥æ·»åŠ å¤šä¸ªæ¯”è¾ƒå™¨ï¼Œç›´åˆ°
+ * 1ï¼Œä»»ä½•å•ä¸ªæ¯”è¾ƒå™¨è¿”å›ä¸€ä¸ªéé›¶çš„ç»“æœï¼Œç„¶åå°†è¯¥ç»“æœè¿”å›ï¼Œæˆ–
+ * 2ï¼ŒComparatorChainæ‰§è¡Œç»“æŸï¼Œå¹¶è¿”å›é›¶ã€‚
  * <p>
- * Ê¹ÓÃËü½øĞĞµÄÅÅĞòºÍSQLÖĞµÄ¶àÁĞÅÅĞò·Ç³£ÀàËÆ£¬¿ÉÒÔÀí½â³ÉÄ£Äâ¶àÁĞÅÅĞòµÄJava´úÂëÊµÏÖ¡£
- * ÓÃComparatorChain ½«Ò»×é Comparator ´®ÆğÀ´Ö®ºó£¬¾Í¿ÉÒÔÊµÏÖ·Ç³£Áé»îµÄ±È½Ï²Ù×÷¡£
+ * ä½¿ç”¨å®ƒè¿›è¡Œçš„æ’åºå’ŒSQLä¸­çš„å¤šåˆ—æ’åºéå¸¸ç±»ä¼¼ï¼Œå¯ä»¥ç†è§£æˆæ¨¡æ‹Ÿå¤šåˆ—æ’åºçš„Javaä»£ç å®ç°ã€‚
+ * ç”¨ComparatorChain å°†ä¸€ç»„ Comparator ä¸²èµ·æ¥ä¹‹åï¼Œå°±å¯ä»¥å®ç°éå¸¸çµæ´»çš„æ¯”è¾ƒæ“ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ28ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ28æ—¥
  */
 public class ComparatorChainTest {
 
@@ -46,28 +46,28 @@ public class ComparatorChainTest {
                 new Issue(15112, "Minor", "Julie"),  
                 new Issue(15113, "Major", "Julie")  
         };  
-        // ÏÈ°´ownerÅÅĞò£¬ÔÙ°´ severityµÄÌØ¶¨Ë³ĞòÅÅĞò£¬×îºó°´idÅÅĞò
+        // å…ˆæŒ‰owneræ’åºï¼Œå†æŒ‰ severityçš„ç‰¹å®šé¡ºåºæ’åºï¼Œæœ€åæŒ‰idæ’åº
         String[] severityOrder = {"Critical", "Major", "Minor", "Enhancement"};
-        // FixedOrderComparator£ºÓÃÓÚ¶¨ÒåÒ»¸öÌØÊâµÄË³Ğò£¬¶ÔÒ»×é¶ÔÏó°´ÕÕÕâÑùµÄ×Ô¶¨ÒåË³Ğò½øĞĞÅÅĞò¡£
+        // FixedOrderComparatorï¼šç”¨äºå®šä¹‰ä¸€ä¸ªç‰¹æ®Šçš„é¡ºåºï¼Œå¯¹ä¸€ç»„å¯¹è±¡æŒ‰ç…§è¿™æ ·çš„è‡ªå®šä¹‰é¡ºåºè¿›è¡Œæ’åºã€‚
         Comparator<String> severityComparator = new FixedOrderComparator<String>(severityOrder);
-        // ¶¨ÒåÒ»×é Comparator Á´£¬Á´ÖĞµÄ Comparator ¶ÔÏó»á±»ÒÀ´ÎÖ´ĞĞ
+        // å®šä¹‰ä¸€ç»„ Comparator é“¾ï¼Œé“¾ä¸­çš„ Comparator å¯¹è±¡ä¼šè¢«ä¾æ¬¡æ‰§è¡Œ
         ComparatorChain<String> compChain = new ComparatorChain<String>();
-        // BeanComparator£ºÊôÓÚbeanutils°ü£¬¿ÉÒÔ°´ÕÕBeanµÄÄ³Ò»Ö¸¶¨ÊôĞÔ½øĞĞÅÅĞò¡£
+        // BeanComparatorï¼šå±äºbeanutilsåŒ…ï¼Œå¯ä»¥æŒ‰ç…§Beançš„æŸä¸€æŒ‡å®šå±æ€§è¿›è¡Œæ’åºã€‚
         compChain.addComparator(new BeanComparator<String>("owner"));
         compChain.addComparator(new BeanComparator<String>("severity", severityComparator));  
         compChain.addComparator(new BeanComparator<String>("id"));  
-        // ½øĞĞÅÅĞò
+        // è¿›è¡Œæ’åº
         Arrays.sort(issues, (Comparator)compChain);
         for (int i = 0; i < issues.length; i++) {  
             System.out.println(issues[i]);  
         }  
         /**
-         * ÆäËûÅÅĞòÆ÷ÊµÏÖ£º
-         * BooleanComparator£ºÓÃÓÚÅÅĞòÒ»×éBoolean¶ÔÏó£¬Ö¸Ã÷ÏÈtrue»¹ÊÇÏÈfalse¡£
-         * ComparableComparator£ºÓÃÓÚÅÅĞòÊµÏÖÁËjava.lang.Comparable½Ó¿ÚµÄ¶ÔÏó£¨ÈçString¡¢IntegerµÈµÈ¶¼ÊµÏÖÁËComparable½Ó¿Ú£©¡£
-         * NullComparator£ºÈÃnullÖµÒ²¿É²ÎÓë±È½Ï£¬¿ÉÒÔÉè¶¨ÎªÏÈnull»òÕßºónull¡£
-         * ReverseComparator£º½«Ô­ÓĞµÄComparatorĞ§¹û·´×ª¡£
-         * TransformingComparator£º½«Ò»¸öComparator×°ÊÎÎª¾ßÓĞTransformerĞ§¹ûµÄComparator¡£ 
+         * å…¶ä»–æ’åºå™¨å®ç°ï¼š
+         * BooleanComparatorï¼šç”¨äºæ’åºä¸€ç»„Booleanå¯¹è±¡ï¼ŒæŒ‡æ˜å…ˆtrueè¿˜æ˜¯å…ˆfalseã€‚
+         * ComparableComparatorï¼šç”¨äºæ’åºå®ç°äº†java.lang.Comparableæ¥å£çš„å¯¹è±¡ï¼ˆå¦‚Stringã€Integerç­‰ç­‰éƒ½å®ç°äº†Comparableæ¥å£ï¼‰ã€‚
+         * NullComparatorï¼šè®©nullå€¼ä¹Ÿå¯å‚ä¸æ¯”è¾ƒï¼Œå¯ä»¥è®¾å®šä¸ºå…ˆnullæˆ–è€…ånullã€‚
+         * ReverseComparatorï¼šå°†åŸæœ‰çš„Comparatoræ•ˆæœåè½¬ã€‚
+         * TransformingComparatorï¼šå°†ä¸€ä¸ªComparatorè£…é¥°ä¸ºå…·æœ‰Transformeræ•ˆæœçš„Comparatorã€‚ 
          */
 	}
 }

@@ -8,11 +8,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * DataSourceManagerÓÃ·¨²âÊÔ
+ * DataSourceManagerç”¨æ³•æµ‹è¯•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ27ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ27æ—¥
  */
 public class DataSourceManagerTest {
 

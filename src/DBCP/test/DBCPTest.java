@@ -6,11 +6,11 @@ package test;
 import java.sql.Connection;
 
 /**
- * DBCPĞÔÄÜÇ³²â
+ * DBCPæ€§èƒ½æµ…æµ‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ27ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ27æ—¥
  */
 public class DBCPTest {
 

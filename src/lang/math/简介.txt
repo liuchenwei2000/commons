@@ -1,3 +1,3 @@
-ÔÚJakarta CommonsÖÐ£¬×¨ÃÅ´¦ÀíÊýÑ§¼ÆËãµÄÀà·Ö±ð¿ÉÒÔÔÚÁ½¸öµØ·½ÕÒµ½£º
-Ò»ÊÇCommons LangµÄorg.apache.commons.lang.math°üÖÐ£¬¶þÊÇÔÚCommons MathÕâ¸öµ¥¶ÀµÄ×ÓÏîÄ¿ÖÐ¡£
-±¾ÀýÊÇÇ°ÕßµÄÊ¹ÓÃÑÝÊ¾¡£
+åœ¨Jakarta Commonsä¸­ï¼Œä¸“é—¨å¤„ç†æ•°å­¦è®¡ç®—çš„ç±»åˆ†åˆ«å¯ä»¥åœ¨ä¸¤ä¸ªåœ°æ–¹æ‰¾åˆ°ï¼š
+ä¸€æ˜¯Commons Langçš„org.apache.commons.lang.mathåŒ…ä¸­ï¼ŒäºŒæ˜¯åœ¨Commons Mathè¿™ä¸ªå•ç‹¬çš„å­é¡¹ç›®ä¸­ã€‚
+æœ¬ä¾‹æ˜¯å‰è€…çš„ä½¿ç”¨æ¼”ç¤ºã€‚

@@ -8,17 +8,17 @@ import java.io.Serializable;
 /**
  * JavaBean
  * <p>
- * DbUtils¶Ô½á¹û¼¯×Ô¶¯·â×°ÎªJavaBeanÊÇÓĞ×Å¿Á¿ÌÒªÇóµÄ£º
- * ±ØĞëÂú×ãJavaBean¹æ·¶£¬Æä´ÎBeanµÄgetterÓësetter·½·¨µÄÃû×ÖÓë½á¹û¼¯µÄÁĞÃûÒ»Ò»¶ÔÓ¦£¬
- * ¶ø²»ÒªÇóJavaBeanµÄË½ÓĞ³ÉÔ±Óë±í½á¹û¼¯ÁĞÃûÒ»Ò»¶ÔÓ¦¡£
+ * DbUtilså¯¹ç»“æœé›†è‡ªåŠ¨å°è£…ä¸ºJavaBeanæ˜¯æœ‰ç€è‹›åˆ»è¦æ±‚çš„ï¼š
+ * å¿…é¡»æ»¡è¶³JavaBeanè§„èŒƒï¼Œå…¶æ¬¡Beançš„getterä¸setteræ–¹æ³•çš„åå­—ä¸ç»“æœé›†çš„åˆ—åä¸€ä¸€å¯¹åº”ï¼Œ
+ * è€Œä¸è¦æ±‚JavaBeançš„ç§æœ‰æˆå‘˜ä¸è¡¨ç»“æœé›†åˆ—åä¸€ä¸€å¯¹åº”ã€‚
  * <p>
- * ±ÈÈç£º
- * person±íÖĞÓĞ¸ö×Ö¶Î½Ğ£ºaddress£¬ÄÇÃ´¶ÔÓ¦µÄJavaBeanµÄPersonÀàÖĞ±ØĞëÓĞgetAddressºÍsetAddressÁ½¸ö·½·¨£¬
- * ¶øPersonÀàÖĞ¿ÉÒÔ½«addressÊôĞÔÃüÃûÎªadd£¬ÕâÊÇÃ»ÎÊÌâµÄ¡£
+ * æ¯”å¦‚ï¼š
+ * personè¡¨ä¸­æœ‰ä¸ªå­—æ®µå«ï¼šaddressï¼Œé‚£ä¹ˆå¯¹åº”çš„JavaBeançš„Personç±»ä¸­å¿…é¡»æœ‰getAddresså’ŒsetAddressä¸¤ä¸ªæ–¹æ³•ï¼Œ
+ * è€ŒPersonç±»ä¸­å¯ä»¥å°†addresså±æ€§å‘½åä¸ºaddï¼Œè¿™æ˜¯æ²¡é—®é¢˜çš„ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ27ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ27æ—¥
  */
 public class PersonVO implements Serializable {
 
@@ -30,8 +30,8 @@ public class PersonVO implements Serializable {
 	private String id;
 	private String name;
 	/**
-	 * ¾¡¿ÉÄÜÊ¹ÓÃ°ü×°ÀàĞÍ£¬¶ø²»ÒªÊ¹ÓÃ»ù±¾ÀàĞÍ¡£
-	 * Êµ¼ÊÉÏ¾ÍÊÇÎªÁË±£Ö¤ÔÚ²éÑ¯½á¹ûÎªnullµÄÊ±ºò£¬Ò²²»»áÒòÎª¸ø»ù±¾ÀàĞÍ¸³nullÖµ¶ø·¢Éú´íÎó¡£
+	 * å°½å¯èƒ½ä½¿ç”¨åŒ…è£…ç±»å‹ï¼Œè€Œä¸è¦ä½¿ç”¨åŸºæœ¬ç±»å‹ã€‚
+	 * å®é™…ä¸Šå°±æ˜¯ä¸ºäº†ä¿è¯åœ¨æŸ¥è¯¢ç»“æœä¸ºnullçš„æ—¶å€™ï¼Œä¹Ÿä¸ä¼šå› ä¸ºç»™åŸºæœ¬ç±»å‹èµ‹nullå€¼è€Œå‘ç”Ÿé”™è¯¯ã€‚
 	 */
 	private Integer age;
 	private String addr;

@@ -17,13 +17,13 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
- * FileUploadÎÄ¼şÉÏ´«Ê¾Àı
+ * FileUploadæ–‡ä»¶ä¸Šä¼ ç¤ºä¾‹
  * <p>
- * ±¾Àà¿É²¿Êğµ½TomcatÖĞ×÷ÎªÒ»¸öservlet½øĞĞ²âÊÔ¡£
+ * æœ¬ç±»å¯éƒ¨ç½²åˆ°Tomcatä¸­ä½œä¸ºä¸€ä¸ªservletè¿›è¡Œæµ‹è¯•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-7
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-7
  */
 public class FileUploadServlet extends HttpServlet {
 
@@ -50,14 +50,14 @@ public class FileUploadServlet extends HttpServlet {
 				// Create a factory for disk-based file items
 				DiskFileItemFactory factory = new DiskFileItemFactory();
 
-				// ÉèÖÃãĞÖµ£¬´óĞ¡³¬¹ı¸ÃÖµµÄÎÄ¼şÖ±½ÓĞ´Èëµ½´ÅÅÌ¡£
+				// è®¾ç½®é˜ˆå€¼ï¼Œå¤§å°è¶…è¿‡è¯¥å€¼çš„æ–‡ä»¶ç›´æ¥å†™å…¥åˆ°ç£ç›˜ã€‚
 				factory.setSizeThreshold(1024);
-				// ÉèÖÃÁÙÊ±ÎÄ¼ş¼Ğ£¬´óĞ¡³¬¹ıãĞÖµµÄÎÄ¼ş»á±»ÁÙÊ±´æ´¢µ½ÁÙÊ±ÎÄ¼ş¼Ğ
+				// è®¾ç½®ä¸´æ—¶æ–‡ä»¶å¤¹ï¼Œå¤§å°è¶…è¿‡é˜ˆå€¼çš„æ–‡ä»¶ä¼šè¢«ä¸´æ—¶å­˜å‚¨åˆ°ä¸´æ—¶æ–‡ä»¶å¤¹
 				factory.setRepository(new File(TEMP_DIR));
 
 				// Create a new file upload handler
 				ServletFileUpload upload = new ServletFileUpload(factory);
-				// ÉèÖÃµ¥¸öÉÏ´«ÎÄ¼şµÄ´óĞ¡ÉÏÏŞ£¬µ¥Î»ÊÇ×Ö½Ú
+				// è®¾ç½®å•ä¸ªä¸Šä¼ æ–‡ä»¶çš„å¤§å°ä¸Šé™ï¼Œå•ä½æ˜¯å­—èŠ‚
 				upload.setFileSizeMax(1024 * 1024 * 2);
 				// Parse the request
 				List<FileItem> fileItems = upload.parseRequest(req);
@@ -65,10 +65,10 @@ public class FileUploadServlet extends HttpServlet {
 				for (FileItem fileItem : fileItems) {
 					// Process a file upload
 					if (!fileItem.isFormField()) {
-						System.out.println(req.getRemoteAddr() + "ÉÏ´«ÎÄ¼ş" + fileItem.getName());
+						System.out.println(req.getRemoteAddr() + "ä¸Šä¼ æ–‡ä»¶" + fileItem.getName());
 						System.out.println(fileItem.getFieldName() + ":" + fileItem.getName());
-						System.out.println("ÀàĞÍ£º" + fileItem.getContentType());
-						System.out.println("ÎÄ¼ş´óĞ¡" + fileItem.getSize());
+						System.out.println("ç±»å‹ï¼š" + fileItem.getContentType());
+						System.out.println("æ–‡ä»¶å¤§å°" + fileItem.getSize());
 
 						File uploadedFile = new File("F:/download" + fileItem.getName());
 						fileItem.write(uploadedFile);

@@ -7,11 +7,11 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Ò»¸öÓĞ¸´ÔÓÊôĞÔ(ÄÚÖÃ¶ÔÏó¡¢Êı×éµÈ)µÄJavaBean
+ * ä¸€ä¸ªæœ‰å¤æ‚å±æ€§(å†…ç½®å¯¹è±¡ã€æ•°ç»„ç­‰)çš„JavaBean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ26æ—¥
  */
 public class Customer {
 
@@ -53,9 +53,9 @@ public class Customer {
 	}
 	
 	public String toString(){
-		return "¡¾Customer name:" + name +", id="+id + 
+		return "ã€Customer name:" + name +", id="+id + 
 				"\naddresses:\n"+ Arrays.asList(addresses) +
-				"\nphone numbers:\n"+ phoneNumbers + "¡¿";
+				"\nphone numbers:\n"+ phoneNumbers + "ã€‘";
 	}
 
 }

@@ -10,13 +10,13 @@ import org.apache.commons.collections4.Closure;
 import org.apache.commons.collections4.CollectionUtils;
 
 /**
- * ClosureÊ¾Àı
+ * Closureç¤ºä¾‹
  * <p>
- * Closure Ìá¹©Ò»¸ö²Ù×÷¶ÔÏóµÄexecute·½·¨£¬ÎªÎÒÃÇÔÚ´¦ÀíÒ»ÏµÁĞ¶ÔÏóÊ±¿ÉÒÔ½«´¦ÀíÂß¼­·ÖÀë³öÀ´¡£
+ * Closure æä¾›ä¸€ä¸ªæ“ä½œå¯¹è±¡çš„executeæ–¹æ³•ï¼Œä¸ºæˆ‘ä»¬åœ¨å¤„ç†ä¸€ç³»åˆ—å¯¹è±¡æ—¶å¯ä»¥å°†å¤„ç†é€»è¾‘åˆ†ç¦»å‡ºæ¥ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-29
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-29
  */
 public class ClosureTest {
 
@@ -25,8 +25,8 @@ public class ClosureTest {
 	 */
 	public static void main(String[] args) {
 		/**
-		 * ³¡¾°:
-		 * ¸øËùÓĞµÄ¹ÍÔ±Employee¼ÓĞ½20%¡£
+		 * åœºæ™¯:
+		 * ç»™æ‰€æœ‰çš„é›‡å‘˜EmployeeåŠ è–ª20%ã€‚
 		 */
 		Employee[] employees = new Employee[]{
 				new Employee("Tom",Type.DEV,1200),
@@ -34,7 +34,7 @@ public class ClosureTest {
 				new Employee("Ann",Type.PM,1400),
 		};
 		List<Employee> employeeList = Arrays.asList(employees);
-		System.out.println("before salary increase£º" + employeeList);
+		System.out.println("before salary increaseï¼š" + employeeList);
 		
 		
 		Closure<Employee> salaryIncreaseClosure = new Closure<Employee>() {
@@ -46,13 +46,13 @@ public class ClosureTest {
 		};
 		
 		CollectionUtils.forAllDo(employeeList, salaryIncreaseClosure);
-		System.out.println(" after salary increase£º" + employeeList);
+		System.out.println(" after salary increaseï¼š" + employeeList);
 		/*
-		 * ÔÚClosure °üÀï»¹ÓĞÒ»Ğ©ºÜ·½±ãµÄÀà£¬Èç£º
-		 * ChainedClosure ¿ÉÒÔ°ü×°Ò»×éClosure×÷ÎªÕûÌåÖ´ĞĞ¡£
-		 * IfClosure ÔÚ´´½¨Ê±ĞèÒªÌá¹©¸øËüÒ»¸öPredicateºÍÁ½¸öClosure£¬Ö´ĞĞÊ±ÏÈ×öPredicateÅĞ¶¨ÔÙ¾ö¶¨Ö´ĞĞÄÄÒ»¸öClosure¡£
-		 * SwitchClosure ¸ù¾İ´´½¨Ê±´«ÈëµÄPredicate×éºÍClosure×é¶ÔÓ¦Ö´ĞĞ¡£
-		 * WhileClosure ¸ù¾İ´´½¨Ê±´«ÈëµÄPredicate×öÅĞ¶Ï£¬Èç¹ûÎªtrueÔòÖ´ĞĞClosure£¬Ö±µ½Predicate·µ»Øfalse¡£
+		 * åœ¨Closure åŒ…é‡Œè¿˜æœ‰ä¸€äº›å¾ˆæ–¹ä¾¿çš„ç±»ï¼Œå¦‚ï¼š
+		 * ChainedClosure å¯ä»¥åŒ…è£…ä¸€ç»„Closureä½œä¸ºæ•´ä½“æ‰§è¡Œã€‚
+		 * IfClosure åœ¨åˆ›å»ºæ—¶éœ€è¦æä¾›ç»™å®ƒä¸€ä¸ªPredicateå’Œä¸¤ä¸ªClosureï¼Œæ‰§è¡Œæ—¶å…ˆåšPredicateåˆ¤å®šå†å†³å®šæ‰§è¡Œå“ªä¸€ä¸ªClosureã€‚
+		 * SwitchClosure æ ¹æ®åˆ›å»ºæ—¶ä¼ å…¥çš„Predicateç»„å’ŒClosureç»„å¯¹åº”æ‰§è¡Œã€‚
+		 * WhileClosure æ ¹æ®åˆ›å»ºæ—¶ä¼ å…¥çš„Predicateåšåˆ¤æ–­ï¼Œå¦‚æœä¸ºtrueåˆ™æ‰§è¡ŒClosureï¼Œç›´åˆ°Predicateè¿”å›falseã€‚
 		 **/
 	}
 }

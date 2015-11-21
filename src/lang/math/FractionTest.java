@@ -6,13 +6,13 @@ package math;
 import org.apache.commons.lang3.math.Fraction;
 
 /**
- * FractionÊ¾Àı
+ * Fractionç¤ºä¾‹
  * <p>
- * FractionÄÜ¹»¾«È·µÄ±íÊ¾·ÖÊı£¬ÊÇNumberµÄÊµÏÖÀà£¬Ò²ÊÇ²»¿É±äÀà¡£
+ * Fractionèƒ½å¤Ÿç²¾ç¡®çš„è¡¨ç¤ºåˆ†æ•°ï¼Œæ˜¯Numberçš„å®ç°ç±»ï¼Œä¹Ÿæ˜¯ä¸å¯å˜ç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-30
  */
 public class FractionTest {
 
@@ -21,50 +21,50 @@ public class FractionTest {
 	 */
 	public static void main(String[] args) {
 		/**
-		 * ´´½¨Fraction
+		 * åˆ›å»ºFraction
 		 */
-		// Fraction¶¨ÒåÁËÒ»Ğ©³£ÓÃµÄ·ÖÊı¶ÔÏó³£Á¿
+		// Fractionå®šä¹‰äº†ä¸€äº›å¸¸ç”¨çš„åˆ†æ•°å¯¹è±¡å¸¸é‡
 		System.out.println(Fraction.ONE_HALF);// 1/2
-		// Ö¸¶¨·Ö×Ó¡¢·ÖÄ¸´´½¨·ÖÊı
+		// æŒ‡å®šåˆ†å­ã€åˆ†æ¯åˆ›å»ºåˆ†æ•°
 		System.out.println(Fraction.getFraction(2, 3));// 2/3
-		// ÓÃdouble´´½¨¶ÔÓ¦µÄ·ÖÊı
+		// ç”¨doubleåˆ›å»ºå¯¹åº”çš„åˆ†æ•°
 		System.out.println(Fraction.getFraction(0.5));// 1/2
-		// ´´½¨´ø·ÖÊı
-		System.out.println(Fraction.getFraction(2, 3, 5));// 2ÓÖ3/5
-		// ÓÃ×Ö·û´®´´½¨¶ÔÓ¦µÄ·ÖÊı
+		// åˆ›å»ºå¸¦åˆ†æ•°
+		System.out.println(Fraction.getFraction(2, 3, 5));// 2åˆ3/5
+		// ç”¨å­—ç¬¦ä¸²åˆ›å»ºå¯¹åº”çš„åˆ†æ•°
 		System.out.println(Fraction.getFraction("3/4"));// 3/4
-		// Ö¸¶¨·Ö×Ó¡¢·ÖÄ¸´´½¨·ÖÊı²¢·µ»ØÔ¼·ÖºóµÄ½á¹û
+		// æŒ‡å®šåˆ†å­ã€åˆ†æ¯åˆ›å»ºåˆ†æ•°å¹¶è¿”å›çº¦åˆ†åçš„ç»“æœ
 		System.out.println(Fraction.getReducedFraction(4, 6));// 2/3
 		System.out.println();
 		/**
-		 * »ñÈ¡FractionĞÅÏ¢
+		 * è·å–Fractionä¿¡æ¯
 		 */
 		Fraction fraction = Fraction.getFraction(5, 4);// 5/4
-		// ·µ»Ø·Ö×Ó
-		System.out.println("·Ö×Ó£º" + fraction.getNumerator());
-		// ·µ»Ø·ÖÄ¸
-		System.out.println("·ÖÄ¸£º" + fraction.getDenominator());
-		// ·µ»ØÕûÊı²¿·Ö£¬¼´½«·ÖÊıÏÈ×ª»¯Îª´ø·ÖÊıĞÎÊ½ÔÙ·µ»ØÕûÊı²¿·Ö
-		System.out.println("ÕûÊı²¿·Ö£º" + fraction.getProperWhole());
-		// ·ÖÊıµÄ×Ö·û´®±íÊ¾
-		System.out.println("toString£º" + fraction.toString());
-		// ·ÖÊıµÄ×Ö·û´®±íÊ¾£¬´ø·ÖÊı¸ñÊ½
-		System.out.println("toProperString£º" + fraction.toProperString());
+		// è¿”å›åˆ†å­
+		System.out.println("åˆ†å­ï¼š" + fraction.getNumerator());
+		// è¿”å›åˆ†æ¯
+		System.out.println("åˆ†æ¯ï¼š" + fraction.getDenominator());
+		// è¿”å›æ•´æ•°éƒ¨åˆ†ï¼Œå³å°†åˆ†æ•°å…ˆè½¬åŒ–ä¸ºå¸¦åˆ†æ•°å½¢å¼å†è¿”å›æ•´æ•°éƒ¨åˆ†
+		System.out.println("æ•´æ•°éƒ¨åˆ†ï¼š" + fraction.getProperWhole());
+		// åˆ†æ•°çš„å­—ç¬¦ä¸²è¡¨ç¤º
+		System.out.println("toStringï¼š" + fraction.toString());
+		// åˆ†æ•°çš„å­—ç¬¦ä¸²è¡¨ç¤ºï¼Œå¸¦åˆ†æ•°æ ¼å¼
+		System.out.println("toProperStringï¼š" + fraction.toProperString());
 		System.out.println();
 		/**
-		 * FractionÔËËã
+		 * Fractionè¿ç®—
 		 */
 		fraction = Fraction.getFraction(2, 4);// 2/4
-		System.out.println("Ô­Ê¼·ÖÊı£º" + fraction);
-		// 1£¬×ÔÔËËã
-		System.out.println(fraction.abs());// È¡¾ø¶ÔÖµ
-		System.out.println(fraction.negate());// È¡Ïà·´Êı
-		System.out.println(fraction.invert());// È¡µ¹Êı
-		System.out.println(fraction.doubleValue());// Ğ¡Êı±íÊ¾
-		System.out.println(fraction.reduce());// Ô¼·ÖºóµÄ·ÖÊı
+		System.out.println("åŸå§‹åˆ†æ•°ï¼š" + fraction);
+		// 1ï¼Œè‡ªè¿ç®—
+		System.out.println(fraction.abs());// å–ç»å¯¹å€¼
+		System.out.println(fraction.negate());// å–ç›¸åæ•°
+		System.out.println(fraction.invert());// å–å€’æ•°
+		System.out.println(fraction.doubleValue());// å°æ•°è¡¨ç¤º
+		System.out.println(fraction.reduce());// çº¦åˆ†åçš„åˆ†æ•°
 		System.out.println();
-		// 2£¬Ïà»¥ÔËËã
-		System.out.println(fraction.pow(2));// Ö¸Êı
+		// 2ï¼Œç›¸äº’è¿ç®—
+		System.out.println(fraction.pow(2));// æŒ‡æ•°
 		System.out.println(fraction.add(Fraction.ONE_THIRD));// +
 		System.out.println(fraction.subtract(Fraction.ONE_THIRD));// -
 		System.out.println(fraction.multiplyBy(Fraction.ONE_THIRD));// *

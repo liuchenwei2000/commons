@@ -1,13 +1,13 @@
 
-Jakarta Commons Logging (JCL)�ṩ����һ����־(Log)�ӿ�(interface)��ͬʱ����������Ͳ������ھ������־ʵ�ֹ��ߡ�
-���ṩ���м��/��־���߿�����һ���򵥵���־���������������򿪷���Աʹ�ò�ͬ�ľ�����־ʵ�ֹ��ߡ��û����ٶ�����Ϥĳ����־ʵ�ֹ��ߵĸ��߼����ϸ�ڡ�
-JCL�ṩ�Ľӿڣ�������һЩ��־���ߣ�����Log4J, Avalon LogKit, JDK 1.4�ȣ������˼򵥵İ�װ���˽ӿڸ��ӽ���Log4J��LogKit��ʵ�֡�
+Jakarta Commons Logging (JCL)提供的是一个日志(Log)接口(interface)，同时兼顾轻量级和不依赖于具体的日志实现工具。
+它提供给中间件/日志工具开发者一个简单的日志操作抽象，允许程序开发人员使用不同的具体日志实现工具。用户被假定已熟悉某种日志实现工具的更高级别的细节。
+JCL提供的接口，对其它一些日志工具，包括Log4J, Avalon LogKit, JDK 1.4等，进行了简单的包装，此接口更接近于Log4J和LogKit的实现。
 
-JCL�����������ĳ����ࣺLog(������¼��)��LogFactory(���𴴽�Logʵ��)��
-��commons-logging.jar�����뵽CLASSPATH֮����������ز²������õ���־���ߣ�Ȼ������������ã��û���������Ҫ���κ����á�
-Ĭ�ϵ�LogFactory�ǰ������еĲ���ȥ���ֲ������Ǹ���־���߽���ʹ�õģ�����˳��Ѱ�ҹ��̻����ҵ���һ������ʱ��ֹ��: 
-1. Ѱ�ҵ�ǰfactory������org.apache.commons.logging.Log�������Ե�ֵ 
-2. Ѱ��ϵͳ������������org.apache.commons.logging.Log��ֵ 
-3. ���Ӧ�ó����classpath����log4j,��ʹ����صİ�װ(wrapper)��(Log4JLogger) 
-4. ���Ӧ�ó���������jdk1.4��ϵͳ�У�ʹ����صİ�װ��(Jdk14Logger) 
-5. ʹ�ü�����־��װ��(SimpleLog) 
+JCL有两个基本的抽象类：Log(基本记录器)和LogFactory(负责创建Log实例)。
+当commons-logging.jar被加入到CLASSPATH之后，它会合理地猜测你想用的日志工具，然后进行自我设置，用户根本不需要做任何设置。
+默认的LogFactory是按照下列的步骤去发现并决定那个日志工具将被使用的（按照顺序，寻找过程会在找到第一个工具时中止）: 
+1. 寻找当前factory中名叫org.apache.commons.logging.Log配置属性的值 
+2. 寻找系统中属性中名叫org.apache.commons.logging.Log的值 
+3. 如果应用程序的classpath中有log4j,则使用相关的包装(wrapper)类(Log4JLogger) 
+4. 如果应用程序运行在jdk1.4的系统中，使用相关的包装类(Jdk14Logger) 
+5. 使用简易日志包装类(SimpleLog) 

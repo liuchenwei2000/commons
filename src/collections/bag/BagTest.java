@@ -10,13 +10,13 @@ import org.apache.commons.collections4.BagUtils;
 import org.apache.commons.collections4.bag.HashBag;
 
 /**
- * BagÊ¾Àı
+ * Bagç¤ºä¾‹
  * <p>
- * ÓĞÊ±ºòĞèÒªÔÚ Collection ÖĞ´æ·Å¶à¸öÏàÍ¬¶ÔÏóµÄ¿½±´£¬²¢ÇÒĞèÒªºÜ·½±ãµÄÈ¡µÃ¸Ã¶ÔÏó¿½±´µÄ¸öÊı£¬Bag Ìá¹©ÕâÑùµÄ¹¦ÄÜ¡£
+ * æœ‰æ—¶å€™éœ€è¦åœ¨ Collection ä¸­å­˜æ”¾å¤šä¸ªç›¸åŒå¯¹è±¡çš„æ‹·è´ï¼Œå¹¶ä¸”éœ€è¦å¾ˆæ–¹ä¾¿çš„å–å¾—è¯¥å¯¹è±¡æ‹·è´çš„ä¸ªæ•°ï¼ŒBag æä¾›è¿™æ ·çš„åŠŸèƒ½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê5ÔÂ28ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´5æœˆ28æ—¥
  */
 public class BagTest {
 
@@ -24,7 +24,7 @@ public class BagTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// HashBagÊÇBag½Ó¿ÚµÄÒ»¸ö±ê×¼ÊµÏÖ¡£
+		// HashBagæ˜¯Bagæ¥å£çš„ä¸€ä¸ªæ ‡å‡†å®ç°ã€‚
 		Bag<String> bag = new HashBag<String>();
 		bag.add("a");
 		bag.add("a");
@@ -34,11 +34,11 @@ public class BagTest {
 		bag.add("c");
 		bag.add("c");
 		
-		System.out.println("copies of a is " + bag.getCount("a"));// »ñÈ¡BagÖĞ¸Ã¶ÔÏóµÄ¿½±´Êı
+		System.out.println("copies of a is " + bag.getCount("a"));// è·å–Bagä¸­è¯¥å¯¹è±¡çš„æ‹·è´æ•°
 		System.out.println("copies of b is " + bag.getCount("b"));
 		System.out.println("copies of c is " + bag.getCount("c"));
 		
-		// BagUtilsÌá¹©Ò»×éstaticµÄ·½·¨ÈÃµ÷ÓÃÕß»ñÈ¡¾­¹ı²»Í¬×°ÊÎºóµÄBagÊµÀı£¬ÀàËÆCollections.
+		// BagUtilsæä¾›ä¸€ç»„staticçš„æ–¹æ³•è®©è°ƒç”¨è€…è·å–ç»è¿‡ä¸åŒè£…é¥°åçš„Bagå®ä¾‹ï¼Œç±»ä¼¼Collections.
 		Bag<String> bag2 = BagUtils.collectionBag(new HashBag<String>());
 		bag2.add("book1", 100);
 		bag2.add("book2", 200);
@@ -46,7 +46,7 @@ public class BagTest {
 		
 		System.out.println("number of books is " + bag2.size());
 		
-		// ·µ»ØBagÖĞËùÓĞÔªËØµÄ¼¯ºÏ±íÊ¾(ÎŞÖØ¸´ÔªËØ)
+		// è¿”å›Bagä¸­æ‰€æœ‰å…ƒç´ çš„é›†åˆè¡¨ç¤º(æ— é‡å¤å…ƒç´ )
 		Set<String> uniqueSet = bag2.uniqueSet();
 		System.out.println("unique elements are " + uniqueSet);
 	}

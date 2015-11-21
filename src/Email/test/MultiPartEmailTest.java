@@ -10,16 +10,16 @@ import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
 
 /**
- * 2,MultiPartEmailÊ¾Àı
+ * 2,MultiPartEmailç¤ºä¾‹
  * <p>
  * MultiPartEmail is used to send multi-part internet email like messages with attachments.
  * <p>
  * To create a multi-part email, call the default constructor and then 
  * you can call setMsg() to set the message and call the different attach() methods.
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ11ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ11æ—¥
  */
 public class MultiPartEmailTest {
 
@@ -30,7 +30,7 @@ public class MultiPartEmailTest {
 		// The simplest way to add the attachments is by using the EmailAttachment class to reference your attachments.
 		EmailAttachment attachment = new EmailAttachment();
 		attachment.setPath("C:/Users/liucw_000/Pictures/cross.png");
-		// ÉèÖÃ¸½¼şµÄÅäÖÃ£º¸½¼şĞÎÊ½»¹ÊÇÄÚÁªĞÎÊ½
+		// è®¾ç½®é™„ä»¶çš„é…ç½®ï¼šé™„ä»¶å½¢å¼è¿˜æ˜¯å†…è”å½¢å¼
 		attachment.setDisposition(EmailAttachment.ATTACHMENT);
 //		attachment.setDisposition(EmailAttachment.INLINE);
 		attachment.setDescription("Picture of Cross");

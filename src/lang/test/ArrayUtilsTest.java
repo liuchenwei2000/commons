@@ -8,13 +8,13 @@ import java.util.Map;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * ArrayUtilsÊ¾Àı
+ * ArrayUtilsç¤ºä¾‹
  * <p>
- * ArrayUtilsÀà°ïÎÒÃÇÍê³ÉÊı×éµÄ´òÓ¡¡¢²éÕÒ¡¢¿ËÂ¡¡¢µ¹Ğò¡¢ÒÔ¼°ÖµĞÍ/¶ÔÏóÊı×éÖ®¼äµÄ×ª»»µÈ²Ù×÷¡£
+ * ArrayUtilsç±»å¸®æˆ‘ä»¬å®Œæˆæ•°ç»„çš„æ‰“å°ã€æŸ¥æ‰¾ã€å…‹éš†ã€å€’åºã€ä»¥åŠå€¼å‹/å¯¹è±¡æ•°ç»„ä¹‹é—´çš„è½¬æ¢ç­‰æ“ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-30
  */
 public class ArrayUtilsTest {
 
@@ -28,12 +28,12 @@ public class ArrayUtilsTest {
 				{ "B", new Double(80) }, { "C", new Double(60) },
 				{ "D", new Double(40) }, { "E", new Double(20) } };
 
-		// ´òÓ¡Êı×é
+		// æ‰“å°æ•°ç»„
 		System.out.println("intArray1: " + ArrayUtils.toString(intArray1));
 		System.out.println("intArray2: " + ArrayUtils.toString(intArray2));
 		System.out.println("notAMap: " + ArrayUtils.toString(notAMap));
 
-		// ²éÕÒÊı×éÔªËØ
+		// æŸ¥æ‰¾æ•°ç»„å…ƒç´ 
 		System.out.println("intArray1 contains '8'? "
 				+ ArrayUtils.contains(intArray1, 8));
 		System.out.println("intArray1 index of '8'? "
@@ -41,19 +41,19 @@ public class ArrayUtilsTest {
 		System.out.println("intArray1 last index of '8'? "
 				+ ArrayUtils.lastIndexOf(intArray1, 8));
 
-		// ¿ËÂ¡¡¢·­×ªÊı×é
+		// å…‹éš†ã€ç¿»è½¬æ•°ç»„
 		int[] intArray3 = ArrayUtils.clone(intArray1);
 		System.out.println("intArray3: " + ArrayUtils.toString(intArray3));
 		ArrayUtils.reverse(intArray3);
 		System.out.println("intArray3 reversed: "
 				+ ArrayUtils.toString(intArray3));
 
-		// Êı×éÀàĞÍ×ª»»
+		// æ•°ç»„ç±»å‹è½¬æ¢
 		Integer[] integerArray1 = ArrayUtils.toObject(intArray1);
 		System.out.println("integerArray1: "
 				+ ArrayUtils.toString(integerArray1));
 
-		// ½«¶şÎ¬Êı×é×ª»»³Émap
+		// å°†äºŒç»´æ•°ç»„è½¬æ¢æˆmap
 		Map<Object, Object> map = ArrayUtils.toMap(notAMap);
 		Double res = (Double) map.get("C");
 		System.out.println("get 'C' from map: " + res);

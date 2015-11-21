@@ -8,11 +8,11 @@ import org.apache.commons.collections.primitives.IntIterator;
 import org.apache.commons.collections.primitives.IntList;
 
 /**
- * IntListÊ¾Àı£¬ÆäËû»ù´¡ÀàĞÍÒ²ÀàËÆ
+ * IntListç¤ºä¾‹ï¼Œå…¶ä»–åŸºç¡€ç±»å‹ä¹Ÿç±»ä¼¼
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-12
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-12
  */
 public class IntListTest {
 
@@ -20,12 +20,12 @@ public class IntListTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Ê¹ÓÃ·½Ê½ÈçÏÂ£¬IntListµÄ½Ó¿ÚÃüÃûºÍJDK collectionÊÇÀàËÆµÄ
+		// ä½¿ç”¨æ–¹å¼å¦‚ä¸‹ï¼ŒIntListçš„æ¥å£å‘½åå’ŒJDK collectionæ˜¯ç±»ä¼¼çš„
 		IntList intList = new ArrayIntList();
 		for (int i = 0; i < 100; i++) {
 			intList.add(i);
 		}
-		// ±éÀú·½Ê½ÈçÏÂ
+		// éå†æ–¹å¼å¦‚ä¸‹
 		IntIterator it = intList.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());

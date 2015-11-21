@@ -4,11 +4,11 @@
 package closure;
 
 /**
- * ¹ÍÔ±£¬ÆÕÍ¨¶ÔÏó
+ * é›‡å‘˜ï¼Œæ™®é€šå¯¹è±¡
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-29
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-29
  */
 public class Employee {
 
@@ -47,6 +47,6 @@ public class Employee {
 	}
 	
 	public String toString() {
-		return " name£º" + name + ", type£º" + type + ", salary£º" + salary + ".";
+		return " nameï¼š" + name + ", typeï¼š" + type + ", salaryï¼š" + salary + ".";
 	}
 }

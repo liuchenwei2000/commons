@@ -1,7 +1,7 @@
 
 Commons Email aims to provide a API for sending email. It is built on top of the Java Mail API, which it aims to simplify.
 
-commons-Email ÒÀÀµÓÚ activation-1.1.1.jar¡¢mail-1.4.5.jar¡£
+commons-Email ä¾èµ–äº activation-1.1.1.jarã€mail-1.4.5.jarã€‚
 
 Some of the mail classes that are provided are as follows:
 

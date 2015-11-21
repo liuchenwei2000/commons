@@ -7,11 +7,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * Log²âÊÔ
+ * Logæµ‹è¯•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-5
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-5
  */
 public class LogTest {
 
@@ -20,10 +20,10 @@ public class LogTest {
 	 */
 	public static void main(String[] args) {
 		Log logger = LogFactory.getLog(LogTest.class);
-		logger.fatal("ÕâÊÇµÚÒ»ÌõfatalÈÕÖ¾");
-		logger.error("ÕâÊÇµÚÒ»ÌõerrorÈÕÖ¾");
-		logger.warn("ÕâÊÇµÚÒ»ÌõwarnÈÕÖ¾");
-		logger.info("ÕâÊÇµÚÒ»ÌõinfoÈÕÖ¾");
-		logger.debug("ÕâÊÇµÚÒ»ÌõdebugÈÕÖ¾");
+		logger.fatal("è¿™æ˜¯ç¬¬ä¸€æ¡fatalæ—¥å¿—");
+		logger.error("è¿™æ˜¯ç¬¬ä¸€æ¡erroræ—¥å¿—");
+		logger.warn("è¿™æ˜¯ç¬¬ä¸€æ¡warnæ—¥å¿—");
+		logger.info("è¿™æ˜¯ç¬¬ä¸€æ¡infoæ—¥å¿—");
+		logger.debug("è¿™æ˜¯ç¬¬ä¸€æ¡debugæ—¥å¿—");
 	}
 }

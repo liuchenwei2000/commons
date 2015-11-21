@@ -4,16 +4,16 @@
 package predicate;
 
 /**
- * Ñ§Éú£¬JavaBean
+ * å­¦ç”Ÿï¼ŒJavaBean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-5-29
+ * åˆ›å»ºæ—¥æœŸï¼š2014-5-29
  */
 public class Student {
 
 	private String name;
-	private int score;// ·ÖÊý
+	private int score;// åˆ†æ•°
 	private Sex sex;
 
 	public Student(String name, int score, Sex sex) {
