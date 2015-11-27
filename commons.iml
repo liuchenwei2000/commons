@@ -16,7 +16,7 @@
       <src_folder value="file://$MODULE_DIR$/src/test/java" expected_position="10" />
     </src_description>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -34,6 +34,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" scope="RUNTIME" name="ojdbc6" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.1" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
@@ -53,6 +54,5 @@
     <orderEntry type="library" name="Maven: asm:asm:3.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.4" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.13" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="ojdbc6" level="project" />
   </component>
 </module>

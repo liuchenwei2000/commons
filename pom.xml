@@ -5,83 +5,14 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>commons</name>
   <description>commons_study</description>
-  <build>
-    <sourceDirectory>src/lang</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/lang</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/logging</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/Primitives</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/collections</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/beanutils</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/DbUtils</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/DBCP</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/Digester</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/IO</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/FileUpload</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <directory>src/Email</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
+ <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
     </plugins>
